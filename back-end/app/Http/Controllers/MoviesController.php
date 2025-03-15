@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Movies;
+use App\Models\Series;
 use Illuminate\Http\Request;
 
 class MoviesController extends Controller
@@ -102,6 +103,21 @@ class MoviesController extends Controller
 
         return response()->json(['message' => 'Movies updated successfully!', 'Movies' => $Movies]);
     }
+
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+
+        if (!$query) {
+            return response()->json([]);
+        }
+
+        $movies = Movies::where('title', 'LIKE', "%{$query}%")->get();
+        $series = Series::where('title', 'LIKE', "%{$query}%")->get();
+
+        return response()->json(array_merge($movies->toArray(), $series->toArray()));
+    }
+
 
     /**
      * Remove the specified resource from storage.

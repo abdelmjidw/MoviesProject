@@ -135,6 +135,14 @@ class UsersController extends Controller
         ]);
     }
 
+    public function logout(Request $request)
+    {
+        auth()->logout();
+
+        return response()->json(['message' => 'Déconnexion réussie']);
+    }
+
+
     /**
      * Remove the specified resource from storage.
      */
