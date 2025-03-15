@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import axios from "axios";
 import "./SearchResults.css";
+import NavBar from "../composent/NavBar";
 
 const API_URL = "http://localhost:8000/api/v1";
 
@@ -33,6 +34,7 @@ function SearchResults() {
 
     return (
         <div className="container">
+            <NavBar />
             <h1 className="h">Search results for "{query}"</h1>
             <div className="movie-grid">
                 {results.map((item) => {
@@ -43,7 +45,7 @@ function SearchResults() {
                         <div key={item.id} className="movie-card">
                             <img src={item.image_path} alt={item.title} />
                             <div className="title">{item.title}</div>
-                            <Link to={link}>
+                            <Link to={link} className="sh">
                                 <button>Show</button>
                             </Link>
                         </div>
