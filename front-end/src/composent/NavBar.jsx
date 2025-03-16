@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./NavBar.css";
 
-function NavBar() {
+function NavBar({ scrollToFooter }) {
     const [searchTerm, setSearchTerm] = useState("");
     const navigate = useNavigate();
+    const location = useLocation(); // Get current route
 
     const handleSearch = (e) => {
         e.preventDefault();
@@ -16,20 +17,26 @@ function NavBar() {
     const handleLogout = () => {
         localStorage.removeItem("token");
         localStorage.removeItem("username");
-
         navigate("/");
-    }
+    };
 
     return (
         <div className="nav-container">
             <h1 className="head">Movies Star</h1>
             <div className="links">
-                <Link className="active" to="/">Home</Link>
-                <Link to="/movies">Movies</Link>
-                <Link to="/series">Series</Link>
-                <Link to="/watch">Watch History</Link>
-                <Link to="/favorites">Favorites</Link>
-                <Link to="/about">About</Link>
+                <Link className={location.pathname === "/Home" ? "active" : ""} to="/Home">Home</Link>
+                <Link className={location.pathname === "/movies" ? "active" : ""} to="/movies">Movies</Link>
+                <Link className={location.pathname === "/series" ? "active" : ""} to="/series">Series</Link>
+                <Link className={location.pathname === "/watch" ? "active" : ""} to="/watch">Watch History</Link>
+                <Link className={location.pathname === "/favorites" ? "active" : ""} to="/favorites" >Favorites</Link>
+                <button
+                    className={location.pathname === "/#foter" ? "active" : ""}
+                    onClick={scrollToFooter}
+                    id="about"
+                >
+                    About
+                </button>
+
             </div>
             <div className="end">
                 <form className="search" onSubmit={handleSearch}>

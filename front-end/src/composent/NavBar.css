@@ -6,6 +6,10 @@
     justify-content: space-between;
     align-items: center;
     color: white;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
 
 }
 
@@ -61,18 +65,22 @@
     position: relative;
 }
 
-.search:hover,
-.search:focus-within {
-    width: 250px;
-    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
+.search:hover {
+    width: 200px;
 }
 
-.nav-input {
+.search:focus-within {
+    width: 250px;
+}
+
+
+.nav-input { 
     flex: 1;
+    width: 100%;
     border: none;
     outline: none;
     font-size: 14px;
-    font-family: 'Kanit', sans-serif;
+    font-family: "Jost", sans-serif;
     color: black;
     background: transparent;
     transition: all 0.4s ease-in-out;
@@ -83,6 +91,7 @@
     color: gray;
     font-style: italic;
     font-size: 13px;
+    text-align: center;
     transition: color 0.3s ease-in-out;
 }
 
@@ -164,4 +173,36 @@
 
 .log-out:hover {
     gap: 15px;
+}/* Add these styles for the "About" button */
+#about {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    top: 1px;
+    letter-spacing: 1px;
+    font-family: "Jost", serif;
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
 }
+
+#about::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: all 0.3s ease;
+}
+
+#about:hover::after {
+    width: 100%;
+}
+
+#about .active {
+    font-weight: bold;
+}
+

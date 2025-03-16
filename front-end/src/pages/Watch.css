@@ -4,7 +4,7 @@
     min-height: 100vh;
     background-color: #111;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: "Jost", sans-serif;
 }
 
 /* Image de fond */
@@ -101,7 +101,7 @@
     font-weight: bold;
     margin-bottom: 20px;
     margin-left: 145px;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .play:hover {
@@ -116,6 +116,7 @@
     color: white;
     padding: 8px;
     border-radius: 20%;
+    cursor: pointer;
 }
 
 .check {
@@ -124,6 +125,7 @@
     color: white;
     padding: 8px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .download:hover,
@@ -131,6 +133,7 @@
 .check:hover {
     background-color: rgb(255, 39, 39);
     color: black;
+    border: none;
 }
 
 /* Description */

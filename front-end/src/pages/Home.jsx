@@ -5,9 +5,10 @@ import Footer from "../composent/Foter";
 import axios from "axios";
 import { motion } from "framer-motion";
 import "./Home.css";
-
+import { useRef } from "react";
 const API_URL = "http://localhost:8000/api/v1/movies";
 const API_URL2 = "http://localhost:8000/api/v1/series";
+
 
 const sliderMovies = [
     {
@@ -48,7 +49,13 @@ function Home() {
     const navigate = useNavigate();
     const sliderMovie = sliderMovies[currentIndex];
     const matchedMovie = movies.find(movie => movie.title === sliderMovie.title);
+    const footerRef = useRef(null); // Create a reference for the footer
 
+    const scrollToFooter = () => {
+        if (footerRef.current) {
+            footerRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    };
     const handleWatchClick = (id, type) => {
         const url = type === "movie" ? `/watch/movie/${id}` : `/watch/series/${id}`;
         navigate(url);
@@ -63,7 +70,7 @@ function Home() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex(prevIndex => (prevIndex + 1) % sliderMovies.length);
-        }, 5000);
+        }, 8000);
 
         return () => clearInterval(interval);
     }, []);
@@ -98,7 +105,8 @@ function Home() {
 
     return (
         <div className="container">
-            <NavBar />
+            <NavBar scrollToFooter={scrollToFooter} />
+
             <h1 className="hello">Welcome {name}</h1>
 
             <div className="slider">
@@ -149,7 +157,10 @@ function Home() {
                     </motion.div>
                 ))}
             </div>
-            <Footer />
+            <div ref={footerRef}>
+                <Footer />
+            </div>
+
         </div>
     );
 }
