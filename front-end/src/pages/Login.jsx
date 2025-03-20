@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Login.css';
+import { Alert } from 'react-bootstrap';
 
 function Login() {
     const [credentials, setCredentials] = useState({ email: '', password: '' });
     const [error, setError] = useState('');
-    const [loading, setLoading] = useState(false); 
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
     const handleChange = (e) => {
@@ -17,24 +18,25 @@ function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        
+
         if (!credentials.email || !credentials.password) {
             setError('Please fill in all fields.');
             return;
         }
 
         setLoading(true);
-        setError(''); 
+        setError('');
         try {
             const resp = await axios.post('http://localhost:8000/api/v1/login', credentials, {
                 headers: { 'Content-Type': 'application/json' },
             });
-        
+
             console.log(resp.data);
-        
+
             if (resp.status === 200) {
                 localStorage.setItem('token', resp.data.token);
                 localStorage.setItem('username', resp.data.user.user_name);
+
                 navigate('/Home');
             } else {
                 if (resp.data.errors) {
@@ -52,7 +54,9 @@ function Login() {
     };
 
     return (
+
         <div className='login-container'>
+
             <div className='login'>
                 <div className='login-header'>
                     <h1 className='head'>Movies Star</h1>
@@ -82,9 +86,10 @@ function Login() {
                         onChange={handleChange}
                         required
                     />
-
-                    {error && <p className="error-message">{error}</p>}
-
+                    {error &&
+                    <Alert variant="danger">
+                        {error}
+                    </Alert> }
                     <button className='submit' type="submit" disabled={loading}>
                         {loading ? 'Loading...' : 'Login'}
                     </button>

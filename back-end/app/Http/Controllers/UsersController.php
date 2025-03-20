@@ -73,9 +73,9 @@ class UsersController extends Controller
     public function update(Request $request, string $id)
     {
         $validator = Validator::make($request->all(), [
-            'user_name' => 'sometimes|required|string|min:3|max:255|regex:/^[a-zA-Z0-9_\-]+$/',
-            'email' => 'sometimes|required|string|email|unique:users,email,' . $id,
-            'password' => 'sometimes|required|string|min:8|confirmed',
+            'user_name' => 'required|string|min:3|max:255|regex:/^[a-zA-Z0-9_\-]+$/',
+            'email' => 'required|string|email|unique:users,email,' . $id,
+            'password' => 'required|string|min:8|confirmed',
         ]);
 
         if ($validator->fails()) {
@@ -137,7 +137,7 @@ class UsersController extends Controller
 
     public function logout(Request $request)
     {
-        auth()->logout();
+        $request->user()->tokens()->delete();
 
         return response()->json(['message' => 'Déconnexion réussie']);
     }

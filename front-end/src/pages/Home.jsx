@@ -6,6 +6,8 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import "./Home.css";
 import { useRef } from "react";
+
+
 const API_URL = "http://localhost:8000/api/v1/movies";
 const API_URL2 = "http://localhost:8000/api/v1/series";
 
@@ -100,68 +102,68 @@ function Home() {
         setCurrentIndex(prevIndex => (prevIndex + 1) % sliderMovies.length);
     };
 
-    if (loading) return <p className="loading">Chargement des films...</p>;
     if (error) return <p className="error">{error}</p>;
 
     return (
-        <div className="container">
-            <NavBar scrollToFooter={scrollToFooter} />
+        <>
+            <div className="container">
+                <NavBar scrollToFooter={scrollToFooter} />
 
-            <h1 className="hello">Welcome {name}</h1>
+                <h1 className="hello">Welcome {name}</h1>
 
-            <div className="slider">
-                <motion.div
-                    key={currentIndex}
-                    initial={{ opacity: 0, x: 100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 0.8 }}
-                    className="slide"
-                >
-                    <img src={sliderMovies[currentIndex].image} alt={sliderMovies[currentIndex].title} />
-                    <div className="slider-content">
-                        <h1 className="title">{sliderMovies[currentIndex].title}</h1>
-                        <p className="description">{sliderMovies[currentIndex].description}</p>
-                        <button
-                            className="watch-now"
-                            onClick={() => matchedMovie ? handleWatchClick(matchedMovie.id, "movie") : alert("Ce film n'est pas disponible !")}
-                            disabled={!matchedMovie}
-                        >
-                            Watch Now
-                        </button>
-                    </div>
-                </motion.div>
-                <button className="prev" onClick={goToPrevious}>‹</button>
-                <button className="next" onClick={goToNext}>›</button>
-            </div>
-
-
-            <h2 className="h">List Of Movies</h2>
-            <div className="movie-grid">
-                {movies.map((movie, index) => (
-                    <motion.div key={index} className="movie-card" whileHover={{ scale: 1.05 }}>
-                        <img src={movie.image_path} alt={movie.title} />
-                        <div className="title">{movie.title}</div>
-                        <button className="watch-btn" onClick={() => handleWatchClick(movie.id, "movie")}>Watch Now</button>
+                <div className="slider">
+                    <motion.div
+                        key={currentIndex}
+                        initial={{ opacity: 0, x: 100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -100 }}
+                        transition={{ duration: 0.8 }}
+                        className="slide"
+                    >
+                        <img src={sliderMovies[currentIndex].image} alt={sliderMovies[currentIndex].title} />
+                        <div className="slider-content">
+                            <h1 className="title">{sliderMovies[currentIndex].title}</h1>
+                            <p className="description">{sliderMovies[currentIndex].description}</p>
+                            <button
+                                className="watch-now"
+                                onClick={() => matchedMovie ? handleWatchClick(matchedMovie.id, "movie") : alert("Ce film n'est pas disponible !")}
+                                disabled={!matchedMovie}
+                            >
+                                Watch Now
+                            </button>
+                        </div>
                     </motion.div>
-                ))}
-            </div>
+                    <button className="prev" onClick={goToPrevious}>‹</button>
+                    <button className="next" onClick={goToNext}>›</button>
+                </div>
 
-            <h2 className="h">List Of Series</h2>
-            <div className="movie-grid">
-                {series.map((serie, index) => (
-                    <motion.div key={index} className="movie-card" whileHover={{ scale: 1.05 }}>
-                        <img src={serie.image_path} alt={serie.title} />
-                        <div className="title">{serie.title}</div>
-                        <button className="watch-btn" onClick={() => handleWatchClick(serie.id, "series")}>Watch Now</button>
-                    </motion.div>
-                ))}
-            </div>
-            <div ref={footerRef}>
-                <Footer />
-            </div>
 
-        </div>
+                <h2 className="h">List Of Movies</h2>
+                <div className="movie-grid">
+                    {movies.map((movie, index) => (
+                        <motion.div key={index} className="movie-card" whileHover={{ scale: 1.05 }}>
+                            <img src={movie.image_path} alt={movie.title} />
+                            <div className="title">{movie.title}</div>
+                            <button className="watch-btn" onClick={() => handleWatchClick(movie.id, "movie")}>Watch Now</button>
+                        </motion.div>
+                    ))}
+                </div>
+
+                <h2 className="h">List Of Series</h2>
+                <div className="movie-grid">
+                    {series.map((serie, index) => (
+                        <motion.div key={index} className="movie-card" whileHover={{ scale: 1.05 }}>
+                            <img src={serie.image_path} alt={serie.title} />
+                            <div className="title">{serie.title}</div>
+                            <button className="watch-btn" onClick={() => handleWatchClick(serie.id, "series")}>Watch Now</button>
+                        </motion.div>
+                    ))}
+                </div>
+                <div ref={footerRef}>
+                    <Footer />
+                </div>
+
+            </div></>
     );
 }
 
