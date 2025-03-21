@@ -144,3 +144,7 @@
     line-height: 1.6;
     color: #ccc;
 }
+a{
+    text-decoration: none;
+    color: white;
+}

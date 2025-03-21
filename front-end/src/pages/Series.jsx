@@ -31,7 +31,6 @@ function SeriesList() {
         navigate(`/watch/series/${id}`);
     };
 
-    if (loading) return <p className="loading">Chargement des séries...</p>;
     if (error) return <p className="error">{error}</p>;
 
     return (

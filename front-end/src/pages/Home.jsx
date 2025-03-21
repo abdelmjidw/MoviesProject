@@ -164,9 +164,43 @@ function Home() {
                         </motion.div>
                     ))}
                 </div>
+
+                <h2 className="h">Actors</h2>
+<div className="movie-grid">
+    {[
+        {
+            name: "Robert Downey Jr.",
+            image: "https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOF5BMl5BanBnXkFtZTgwNTQ4MTE2MjE@._V1_FMjpg_UX1000_.jpg",
+        },
+        {
+            name: "Scarlett Johansson",
+            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Scarlett_Johansson_by_Gage_Skidmore_2_%28cropped%2C_2%29.jpg/640px-Scarlett_Johansson_by_Gage_Skidmore_2_%28cropped%2C_2%29.jpg",
+        },
+        {
+            name: "Chris Hemsworth",
+            image: "https://m.media-amazon.com/images/M/MV5BOTU2MTI0NTIyNV5BMl5BanBnXkFtZTcwMTA4Nzc3OA@@._V1_FMjpg_UX1000_.jpg",
+        },
+        {
+            name: "Gal Gadot",
+            image: "https://walkoffame.com/wp-content/uploads/2025/03/IMG_9090.jpg",
+        },
+        {
+            name: "Leonardo DiCaprio",
+            image: "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_FMjpg_UX1000_.jpg",
+        },
+    ].map((actor, index) => (
+        <motion.div key={index} className="movie-card" whileHover={{ scale: 1.05 }}>
+            <img src={actor.image} alt={actor.name} />
+            <div className="title">{actor.name}</div>
+        </motion.div>
+    ))}
+</div>
+
                 <div ref={footerRef}>
                     <Footer />
                 </div>
+
+                
 
             </div></>
     );

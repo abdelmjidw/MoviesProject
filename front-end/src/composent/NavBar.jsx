@@ -26,8 +26,10 @@ function NavBar({ scrollToFooter }) {
     };
 
     return (
+        <>
+        <div><Toaster /></div>
         <div className="nav-container">
-            <div><Toaster /></div>
+            
             <h1 className="head">Movies Star</h1>
             <div className="links">
                 <Link className={location.pathname === "/Home" ? "active" : ""} to="/Home">Home</Link>
@@ -61,7 +63,7 @@ function NavBar({ scrollToFooter }) {
                     Log Out <IoLogOutOutline className="icon-log" />
                 </button>
             </div>
-        </div>
+        </div></>
     );
 }
 
