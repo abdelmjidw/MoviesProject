@@ -9,8 +9,7 @@
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 999;
-
+    z-index: 999;  
 }
 
 .head {
@@ -161,7 +160,7 @@
 .links a:hover::after {
     width: 100%;
 }
-
+c
 .links .active {
     font-weight: bold;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Foter.css";
+import { FaFacebook } from "react-icons/fa";
 
 const Footer = React.forwardRef((props, ref) => {
     return (

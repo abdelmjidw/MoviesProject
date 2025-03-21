@@ -53,8 +53,11 @@ function Watch() {
         // Optionnel: Naviguer vers la page des favoris après l'ajout
     };
 
-    if (loading) return <p className="loading">Chargement du contenu...</p>;
+    if (loading) return <div>Loading...</div>;  // Show a loading message until the data is fetched
+
     if (error) return <p className="error">{error}</p>;
+
+    if (!content) return <div>No content available.</div>;  // Handle the case where content is still null
 
     return (
         <div className="watch-page">
@@ -77,7 +80,7 @@ function Watch() {
                 </div>
 
                 {/* Boutons */}
-                <button className="play"><FaPlay /> Watch </button>
+                <a  href="https://www.egybest.co.in/watch/4628" target="_blanc"><button className="play"><FaPlay /> Watch </button></a>
                 <div className="buttons">
                     <button className="download"><FaDownload /></button>
                     <button className="share"><FaShareAlt /></button>

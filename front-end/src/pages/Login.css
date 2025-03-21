@@ -204,3 +204,10 @@ span {
         transform: translateY(0);
     }
 }
+
+.show{
+    position: absolute;
+    top: 61.5%;
+    right: 11%;
+    cursor: pointer;
+}

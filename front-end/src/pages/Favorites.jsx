@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Favorites.css";
 import NavBar from "../composent/NavBar";
+import Foter from "../composent/Foter";
 
 function Favorites() {
     const [favorites, setFavorites] = useState([]);
@@ -39,6 +40,7 @@ function Favorites() {
                     })}
                 </div>
             )}
+            <Foter/>
         </div>
     );
 }

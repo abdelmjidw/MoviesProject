@@ -1,7 +1,9 @@
+import { IoMdSearch } from "react-icons/io";
+import { IoLogOutOutline } from "react-icons/io5";
 import { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./NavBar.css";
-
+import { toast, Toaster } from "react-hot-toast";
 function NavBar({ scrollToFooter }) {
     const [searchTerm, setSearchTerm] = useState("");
     const navigate = useNavigate();
@@ -18,10 +20,16 @@ function NavBar({ scrollToFooter }) {
         localStorage.removeItem("token");
         localStorage.removeItem("username");
         navigate("/");
+        toast('Come back soon!', {
+            icon: '😔',
+        });
     };
 
     return (
+        <>
+        <div><Toaster /></div>
         <div className="nav-container">
+            
             <h1 className="head">Movies Star</h1>
             <div className="links">
                 <Link className={location.pathname === "/Home" ? "active" : ""} to="/Home">Home</Link>
@@ -48,14 +56,14 @@ function NavBar({ scrollToFooter }) {
                         onChange={(e) => setSearchTerm(e.target.value)}
                     />
                     <button type="submit">
-                        <ion-icon className="icon" name="search-outline"></ion-icon>
+                        <IoMdSearch className="icon" />
                     </button>
                 </form>
                 <button className="log-out" onClick={handleLogout}>
-                    Log Out <ion-icon className="icon-log" name="log-out-outline"></ion-icon>
+                    Log Out <IoLogOutOutline className="icon-log" />
                 </button>
             </div>
-        </div>
+        </div></>
     );
 }
 

@@ -1,12 +1,17 @@
+import { LiaEyeSlash } from "react-icons/lia";
+import { LiaEyeSolid } from "react-icons/lia";
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Login.css';
+import { Alert } from 'react-bootstrap';
+import { toast, Toaster } from 'react-hot-toast';
 
 function Login() {
     const [credentials, setCredentials] = useState({ email: '', password: '' });
     const [error, setError] = useState('');
-    const [loading, setLoading] = useState(false); 
+    const [loading, setLoading] = useState(false);
+    const [show , setShow] = useState(true);
     const navigate = useNavigate();
 
     const handleChange = (e) => {
@@ -16,21 +21,22 @@ function Login() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        
+    
         if (!credentials.email || !credentials.password) {
             setError('Please fill in all fields.');
+            toast.error('Please fill in all fields.');
             return;
         }
-        setLoading(true);
 
+        setLoading(true);
+        setError(''); 
         try {
             const resp = await axios.post('http://localhost:8000/api/v1/login', credentials, {
                 headers: { 'Content-Type': 'application/json' },
             });
-        
+    
             console.log(resp.data);
-        
+    
             if (resp.status === 200) {
                 localStorage.setItem('token', resp.data.token);
                 localStorage.setItem('username', resp.data.user.user_name);
@@ -38,20 +44,26 @@ function Login() {
             } else {
                 if (resp.data.errors) {
                     setError(Object.values(resp.data.errors).join(', '));
+                    toast.error(Object.values(resp.data.errors).join(', '));
                 } else {
-                    setError(resp.data.message || 'Identifiants invalides');
+                    setError(resp.data.message || 'Invalid credentials');
+                    toast.error(resp.data.message || 'Invalid credentials');
                 }
             }
         } catch (err) {
             console.error(err);
             setError('An error occurred. Please try again.');
+            toast.error('An error occurred. Please try again.');
         } finally {
             setLoading(false);
         }
     };
+    
 
     return (
+
         <div className='login-container'>
+            <div><Toaster/></div>
             <div className='login'>
                 <div className='login-header'>
                     <h1 className='head'>Movies Star</h1>
@@ -67,7 +79,7 @@ function Login() {
                         placeholder="Email"
                         value={credentials.email}
                         onChange={handleChange}
-                        required
+                        
                     />
 
                     <label htmlFor="password">Password</label>
@@ -75,15 +87,13 @@ function Login() {
                         className='login-input'
                         id="password"
                         name="password"
-                        type="password"
+                        {...!show ? {type:"text"} : {type:"password"}}
                         placeholder="Password"
                         value={credentials.password}
                         onChange={handleChange}
-                        required
-                    />
-
-                    {error && <p className="error-message">{error}</p>}
-
+                        
+                        
+                    /> { show ?<LiaEyeSlash className="show" onClick={()=>{setShow(!show)}}/> : <LiaEyeSolid className="show" onClick={()=>{setShow(!show)}}/>}
                     <button className='submit' type="submit" disabled={loading}>
                         {loading ? 'Loading...' : 'Login'}
                     </button>

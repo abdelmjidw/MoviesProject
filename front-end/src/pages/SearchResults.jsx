@@ -28,7 +28,7 @@ function SearchResults() {
         }
     }, [query]);
 
-    if (loading) return <p className="loading">Research in progress...</p>;
+
     if (error) return <p className="error">{error}</p>;
     if (results.length === 0) return <p className="no-results">No results found.</p>;
 
