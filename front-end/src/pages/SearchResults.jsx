@@ -3,7 +3,7 @@ import { useLocation, Link } from "react-router-dom";
 import axios from "axios";
 import "./SearchResults.css";
 import NavBar from "../composent/NavBar";
-
+import Foter from "../composent/Foter";
 const API_URL = "http://localhost:8000/api/v1";
 
 function SearchResults() {
@@ -55,6 +55,7 @@ function SearchResults() {
 
                 )}
             </div>
+            <Foter/>
         </div>
     );
 }
