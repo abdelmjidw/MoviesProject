@@ -19,11 +19,12 @@ function MoviesList() {
         axios.get(API_URL)
             .then(response => {
                 setMovies(response.data || []);
-                setLoading(false);
+                // setLoading(false);
             })
             .catch(() => {
                 setError("Erreur lors du chargement des films.");
-                setLoading(false);
+                // setLoading(false);
+                
             });
     }, []);
 
@@ -31,7 +32,7 @@ function MoviesList() {
         navigate(`/watch/movie/${id}`);
     };
 
-    if (loading) return <p className="loading">Chargement des films...</p>;
+    // if (loading) return <p className="loading">Chargement des films...</p>;
     if (error) return <p className="error">{error}</p>;
 
     return (

@@ -6,6 +6,8 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import "./Home.css";
 import { useRef } from "react";
+import { toast, Toaster } from 'react-hot-toast';
+
 
 
 const API_URL = "http://localhost:8000/api/v1/movies";
@@ -45,7 +47,7 @@ function Home() {
     const [name, setName] = useState("");
     const [movies, setMovies] = useState([]);
     const [series, setSeries] = useState([]);
-    const [loading, setLoading] = useState(true);
+
     const [error, setError] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
     const navigate = useNavigate();
@@ -82,6 +84,8 @@ function Home() {
         try {
             const response = await axios.get(url);
             setter(response.data || []);
+            
+
         } catch (err) {
             setError(errorMessage);
             setter([]);
@@ -91,7 +95,7 @@ function Home() {
     useEffect(() => {
         fetchData(API_URL, setMovies, "Erreur lors du chargement des films.");
         fetchData(API_URL2, setSeries, "Erreur lors du chargement des séries.");
-        setLoading(false);
+        toast.success('Enjoy!')
     }, [fetchData]);
 
     const goToPrevious = () => {
@@ -107,6 +111,7 @@ function Home() {
     return (
         <>
             <div className="container">
+            <div><Toaster/></div>
                 <NavBar scrollToFooter={scrollToFooter} />
 
                 <h1 className="hello">Welcome {name}</h1>
