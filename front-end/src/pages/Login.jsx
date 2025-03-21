@@ -22,9 +22,8 @@ function Login() {
             setError('Please fill in all fields.');
             return;
         }
-
         setLoading(true);
-        setError(''); 
+
         try {
             const resp = await axios.post('http://localhost:8000/api/v1/login', credentials, {
                 headers: { 'Content-Type': 'application/json' },

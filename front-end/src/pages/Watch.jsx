@@ -51,7 +51,6 @@ function Watch() {
         setIsFavorite(!isFavorite); // Mettre à jour l'état du bouton Favoris
 
         // Optionnel: Naviguer vers la page des favoris après l'ajout
-        navigate("/favorites");  // Redirection vers la page Favoris
     };
 
     if (loading) return <p className="loading">Chargement du contenu...</p>;

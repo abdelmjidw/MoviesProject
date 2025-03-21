@@ -20,6 +20,14 @@ class UsersSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
+                'user_name' => 'Mohamed',
+                'email' => 'Idattalebmohamed@gmail.com',
+                'password' => Hash::make('12345678'),
+                'role' => 'user',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
                 'user_name' => 'user1',
                 'email' => 'user1@example.com',
                 'password' => Hash::make('password123'),

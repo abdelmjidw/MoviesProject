@@ -31,4 +31,6 @@ class Movies extends Model
         return $this->hasMany(Favorites::class);
     }
 
+    
+
 }

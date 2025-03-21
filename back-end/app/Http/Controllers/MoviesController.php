@@ -61,6 +61,7 @@ class MoviesController extends Controller
     {
         // Retrieve a specific Movies by ID
         $Movies = Movies::findOrFail($id);
+        $Movies->image_path = asset($Movies->image_path);
         return response()->json($Movies);
     }
 
