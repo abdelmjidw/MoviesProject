@@ -9,6 +9,9 @@ import Favorites from './pages/Favorites';
 import SeriesList from './pages/Series';
 import MoviesList from './pages/Movies';
 import SearchResults from './pages/SearchResults';
+import ProtectedRoute from './ProtectedRoute';
+
+
 function App() {
   return (
     <>
@@ -16,13 +19,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/Home" element={<Home />} />
-          <Route path="/movies" element={<MoviesList />} />
-          <Route path="/series" element={<SeriesList />} />
-          <Route path="/watch/movie/:id" element={<Watch type="movie" />} />
-          <Route path="/watch/series/:id" element={<Watch type="series" />} />
-          <Route path="/favorites" element={<Favorites />} />
-          <Route path="/search" element={<SearchResults />} />
+          <Route path="/Home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+          <Route path="/movies" element={<ProtectedRoute><MoviesList /></ProtectedRoute>} />
+          <Route path="/series" element={<ProtectedRoute><SeriesList /></ProtectedRoute>} />
+          <Route path="/watch/movie/:id" element={<ProtectedRoute><Watch type="movie" /></ProtectedRoute>} />
+          <Route path="/watch/series/:id" element={<ProtectedRoute><Watch type="series" /></ProtectedRoute>} />
+          <Route path="/favorites" element={<ProtectedRoute><Favorites /></ProtectedRoute>} />
+          <Route path="/search" element={<ProtectedRoute><SearchResults /></ProtectedRoute>} />
         </Routes>
       </Router>
     </>
