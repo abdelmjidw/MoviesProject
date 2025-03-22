@@ -14,7 +14,7 @@
 
 .head {
     color: red;
-    font-size: 20px;
+    font-size: 25px;
     text-align: start;
 
 }
@@ -59,7 +59,7 @@
     background-color: white;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     width: 120px;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease;
     overflow: hidden;
     position: relative;
 }
@@ -82,7 +82,7 @@
     font-family: "Jost", sans-serif;
     color: black;
     background: transparent;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease;
     padding: 5px 10px;
 }
 
