@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Favorites.css";
 import NavBar from "../composent/NavBar";
 import Foter from "../composent/Foter";
 
 function Favorites() {
     const [favorites, setFavorites] = useState([]);
+    const location = useLocation();
 
     useEffect(() => {
         // Récupérer les favoris depuis le localStorage
@@ -23,7 +24,8 @@ function Favorites() {
                 <div className="favorites-list">
                     {favorites.map((item) => {
                         
-                        const type = item.type === "movie" ? "movie" : "series";
+                        const isMovie = location.pathname.includes("movies");
+                        const type = isMovie ? "movies" : "series";
                         const link = `/watch/${type}/${item.id}`;
 
                         return (

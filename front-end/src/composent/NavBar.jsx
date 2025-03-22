@@ -35,7 +35,7 @@ function NavBar({ scrollToFooter }) {
                     <Link className={location.pathname === "/Home" ? "active" : ""} to="/Home">Home</Link>
                     <Link className={location.pathname === "/movies" ? "active" : ""} to="/movies">Movies</Link>
                     <Link className={location.pathname === "/series" ? "active" : ""} to="/series">Series</Link>
-                    <Link className={location.pathname === "/watch" ? "active" : ""} to="/watch">Watch History</Link>
+                    <Link className={location.pathname === "/watch-history" ? "active" : ""} to="/watch-history">Watch History</Link>
                     <Link className={location.pathname === "/favorites" ? "active" : ""} to="/favorites" >Favorites</Link>
                     <button
                         className={location.pathname === "/#foter" ? "active" : ""}

@@ -1,4 +1,4 @@
-import { useParams, useLocation, useNavigate } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { FaClock, FaCalendarAlt, FaPlay, FaDownload, FaShareAlt, FaCheck } from "react-icons/fa";
@@ -9,14 +9,13 @@ const API_URL = "http://localhost:8000/api/v1";
 function Watch() {
     const { id } = useParams();
     const location = useLocation();
-    const navigate = useNavigate();  // Utilisation de useNavigate
     const [content, setContent] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [isFavorite, setIsFavorite] = useState(false);
 
     // Déterminer si c'est un film ou une série
-    const isMovie = location.pathname.includes("movie");
+    const isMovie = location.pathname.includes("movies");
     const type = isMovie ? "movies" : "series";
 
     // Récupérer les favoris depuis le localStorage ou créer une liste vide
@@ -40,6 +39,28 @@ function Watch() {
 
         fetchContent();
     }, [id, type]);
+
+    useEffect(() => {
+        if (content) {
+            const watchHistory = JSON.parse(localStorage.getItem("watchHistory")) || [];
+
+            // Vérifier si ce contenu est déjà dans l'historique
+            const isAlreadyWatched = watchHistory.some(item => item.id === content.id && item.type === type);
+
+            if (!isAlreadyWatched) {
+                const newEntry = {
+                    id: content.id,
+                    type: type,
+                    title: content.title,
+                    image: content.image_path,
+                    watchedAt: new Date().toISOString()
+                };
+
+                localStorage.setItem("watchHistory", JSON.stringify([...watchHistory, newEntry]));
+            }
+        }
+    }, [content, type]);
+
 
     const handleFavoriteClick = () => {
         const updatedFavorites = isFavorite
@@ -80,7 +101,7 @@ function Watch() {
                 </div>
 
                 {/* Boutons */}
-                <a  href="https://www.egybest.co.in/watch/4628" target="_blanc"><button className="play"><FaPlay /> Watch </button></a>
+                <a href="https://www.egybest.co.in/watch/4628" target="_blanc"><button className="play"><FaPlay /> Watch </button></a>
                 <div className="buttons">
                     <button className="download"><FaDownload /></button>
                     <button className="share"><FaShareAlt /></button>
