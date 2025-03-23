@@ -14,14 +14,9 @@ function Watch() {
     const [error, setError] = useState(null);
     const [isFavorite, setIsFavorite] = useState(false);
 
-    // Déterminer si c'est un film ou une série
     const isMovie = location.pathname.includes("movies");
     const type = isMovie ? "movies" : "series";
 
-    // Récupérer les favoris depuis le localStorage ou créer une liste vide
-    const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
-
-    // Vérifier si ce contenu est déjà dans les favoris
     useEffect(() => {
         const fetchContent = async () => {
             try {
@@ -29,6 +24,7 @@ function Watch() {
                 setContent(response.data);
 
                 // Vérifier si ce contenu est déjà dans les favoris
+                const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
                 setIsFavorite(storedFavorites.some((item) => item.id === response.data.id));
             } catch (err) {
                 setError("Ce contenu n'existe pas.");
@@ -40,11 +36,11 @@ function Watch() {
         fetchContent();
     }, [id, type]);
 
-    useEffect(() => {
+    // Fonction pour ajouter un élément à l'historique de visionnage
+    const addToWatchHistory = () => {
         if (content) {
             const watchHistory = JSON.parse(localStorage.getItem("watchHistory")) || [];
 
-            // Vérifier si ce contenu est déjà dans l'historique
             const isAlreadyWatched = watchHistory.some(item => item.id === content.id && item.type === type);
 
             if (!isAlreadyWatched) {
@@ -53,57 +49,55 @@ function Watch() {
                     type: type,
                     title: content.title,
                     image: content.image_path,
-                    watchedAt: new Date().toISOString()
+                    watchedAt: new Date().toISOString(),
                 };
 
-                localStorage.setItem("watchHistory", JSON.stringify([...watchHistory, newEntry]));
+                localStorage.setItem("watchHistory", JSON.stringify([newEntry, ...watchHistory]));
             }
         }
-    }, [content, type]);
-
+    };
 
     const handleFavoriteClick = () => {
+        const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
         const newFavorite = { ...content, type };
 
         const updatedFavorites = isFavorite
-            ? storedFavorites.filter((item) => item.id !== content.id) // Supprimer du favoris
-            : [...storedFavorites, newFavorite]; // Ajouter aux favoris
+            ? storedFavorites.filter((item) => item.id !== content.id)
+            : [...storedFavorites, newFavorite];
 
-        // Sauvegarder les favoris dans le localStorage
         localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-        setIsFavorite(!isFavorite); // Mettre à jour l'état du bouton Favoris
-
-        // Optionnel: Naviguer vers la page des favoris après l'ajout
+        setIsFavorite(!isFavorite);
     };
 
-    if (loading) return <div>Loading...</div>;  // Show a loading message until the data is fetched
-
+    if (loading) return <div>Loading...</div>;
     if (error) return <p className="error">{error}</p>;
-
-    if (!content) return <div>No content available.</div>;  // Handle the case where content is still null
+    if (!content) return <div>No content available.</div>;
 
     return (
         <div className="watch-page">
-            {/* Image de fond */}
             <div className="background">
                 <img src={content.image_path} alt="Background" className="background-image" />
             </div>
 
-            {/* Contenu principal */}
             <div className="watch-container">
                 <img src={content.image_path} alt={content.title} className="poster" />
                 <h1 className="tit">{content.title}</h1>
                 <p className="subtitle">{content.tagline || " "}</p>
 
-                {/* Détails */}
                 <div className="details">
                     <span><FaClock /> {isMovie ? `${content.duration} min` : `${content.seasons} seasons`}</span>
                     <span><FaCalendarAlt /> {content.release_date}</span>
                     <span className="rating">IMDb {content.rating}</span>
                 </div>
 
-                {/* Boutons */}
-                <a href="https://www.egybest.co.in/watch/4628" target="_blanc"><button className="play"><FaPlay /> Watch </button></a>
+                {/* Bouton Watch qui ajoute à l'historique avant d'ouvrir le lien */}
+                <button className="play" onClick={() => {
+                    addToWatchHistory();
+                    window.open("https://www.egybest.co.in/watch/4628", "_blank");
+                }}>
+                    <FaPlay /> Watch
+                </button>
+
                 <div className="buttons">
                     <button className="download"><FaDownload /></button>
                     <button className="share"><FaShareAlt /></button>
@@ -112,7 +106,6 @@ function Watch() {
                     </button>
                 </div>
 
-                {/* Description */}
                 <p className="descript">{content.description}</p>
             </div>
         </div>
