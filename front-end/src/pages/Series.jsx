@@ -34,20 +34,23 @@ function SeriesList() {
     if (error) return <p className="error">{error}</p>;
 
     return (
-        <div className="container">
+        <>
             <NavBar />
-            <h1 className="h">List Of Series</h1>
-            <div className="movie-grid">
-                {series.map((serie, index) => (
-                    <motion.div key={index} className="movie-card" whileHover={{ scale: 1.05 }}>
-                        <img src={serie.image_path} alt={serie.title} />
-                        <div className="title">{serie.title}</div>
-                        <button className="watch-btn" onClick={() => handleWatchClick(serie.id)}>Watch Now</button>
-                    </motion.div>
-                ))}
+            <div className="container">
+
+                <h1 className="h">List Of Series</h1>
+                <div className="movie-grid">
+                    {series.map((serie, index) => (
+                        <motion.div key={index} className="movie-card" whileHover={{ scale: 1.05 }}>
+                            <img src={serie.image_path} alt={serie.title} />
+                            <div className="title">{serie.title}</div>
+                            <button className="watch-btn" onClick={() => handleWatchClick(serie.id)}>Watch Now</button>
+                        </motion.div>
+                    ))}
+                </div>
+                <Footer />
             </div>
-            <Footer />
-        </div>
+        </>
     );
 }
 

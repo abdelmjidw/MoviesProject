@@ -61,7 +61,7 @@ function Home() {
         }
     };
     const handleWatchClick = (id, type) => {
-        const url = type === "movie" ? `/watch/movie/${id}` : `/watch/series/${id}`;
+        const url = type === "movies" ? `/watch/movies/${id}` : `/watch/series/${id}`;
         navigate(url);
     };
 
@@ -84,7 +84,7 @@ function Home() {
         try {
             const response = await axios.get(url);
             setter(response.data || []);
-            
+
 
         } catch (err) {
             setError(errorMessage);
@@ -110,9 +110,10 @@ function Home() {
 
     return (
         <>
+            <NavBar scrollToFooter={scrollToFooter} />
             <div className="container">
-            <div><Toaster/></div>
-                <NavBar scrollToFooter={scrollToFooter} />
+                <div><Toaster /></div>
+
 
                 <h1 className="hello">Welcome {name}</h1>
 
@@ -131,7 +132,7 @@ function Home() {
                             <p className="description">{sliderMovies[currentIndex].description}</p>
                             <button
                                 className="watch-now"
-                                onClick={() => matchedMovie ? handleWatchClick(matchedMovie.id, "movie") : alert("Ce film n'est pas disponible !")}
+                                onClick={() => matchedMovie ? handleWatchClick(matchedMovie.id, "movies") : alert("Ce film n'est pas disponible !")}
                                 disabled={!matchedMovie}
                             >
                                 Watch Now
@@ -149,7 +150,7 @@ function Home() {
                         <motion.div key={index} className="movie-card" whileHover={{ scale: 1.05 }}>
                             <img src={movie.image_path} alt={movie.title} />
                             <div className="title">{movie.title}</div>
-                            <button className="watch-btn" onClick={() => handleWatchClick(movie.id, "movie")}>Watch Now</button>
+                            <button className="watch-btn" onClick={() => handleWatchClick(movie.id, "movies")}>Watch Now</button>
                         </motion.div>
                     ))}
                 </div>
@@ -166,41 +167,41 @@ function Home() {
                 </div>
 
                 <h2 className="h">Actors</h2>
-<div className="movie-grid">
-    {[
-        {
-            name: "Robert Downey Jr.",
-            image: "https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOF5BMl5BanBnXkFtZTgwNTQ4MTE2MjE@._V1_FMjpg_UX1000_.jpg",
-        },
-        {
-            name: "Scarlett Johansson",
-            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Scarlett_Johansson_by_Gage_Skidmore_2_%28cropped%2C_2%29.jpg/640px-Scarlett_Johansson_by_Gage_Skidmore_2_%28cropped%2C_2%29.jpg",
-        },
-        {
-            name: "Chris Hemsworth",
-            image: "https://m.media-amazon.com/images/M/MV5BOTU2MTI0NTIyNV5BMl5BanBnXkFtZTcwMTA4Nzc3OA@@._V1_FMjpg_UX1000_.jpg",
-        },
-        {
-            name: "Gal Gadot",
-            image: "https://walkoffame.com/wp-content/uploads/2025/03/IMG_9090.jpg",
-        },
-        {
-            name: "Leonardo DiCaprio",
-            image: "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_FMjpg_UX1000_.jpg",
-        },
-    ].map((actor, index) => (
-        <motion.div key={index} className="movie-card" whileHover={{ scale: 1.05 }}>
-            <img src={actor.image} alt={actor.name} />
-            <div className="title">{actor.name}</div>
-        </motion.div>
-    ))}
-</div>
+                <div className="movie-grid">
+                    {[
+                        {
+                            name: "Robert Downey Jr.",
+                            image: "https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOF5BMl5BanBnXkFtZTgwNTQ4MTE2MjE@._V1_FMjpg_UX1000_.jpg",
+                        },
+                        {
+                            name: "Scarlett Johansson",
+                            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Scarlett_Johansson_by_Gage_Skidmore_2_%28cropped%2C_2%29.jpg/640px-Scarlett_Johansson_by_Gage_Skidmore_2_%28cropped%2C_2%29.jpg",
+                        },
+                        {
+                            name: "Chris Hemsworth",
+                            image: "https://m.media-amazon.com/images/M/MV5BOTU2MTI0NTIyNV5BMl5BanBnXkFtZTcwMTA4Nzc3OA@@._V1_FMjpg_UX1000_.jpg",
+                        },
+                        {
+                            name: "Gal Gadot",
+                            image: "https://walkoffame.com/wp-content/uploads/2025/03/IMG_9090.jpg",
+                        },
+                        {
+                            name: "Leonardo DiCaprio",
+                            image: "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_FMjpg_UX1000_.jpg",
+                        },
+                    ].map((actor, index) => (
+                        <motion.div key={index} className="movie-card" whileHover={{ scale: 1.05 }}>
+                            <img src={actor.image} alt={actor.name} />
+                            <div className="title">{actor.name}</div>
+                        </motion.div>
+                    ))}
+                </div>
 
                 <div ref={footerRef}>
                     <Footer />
                 </div>
 
-                
+
 
             </div></>
     );

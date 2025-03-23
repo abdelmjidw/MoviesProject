@@ -1,6 +1,7 @@
 /* Conteneur principal */
 .history-container {
-    max-width: 900px;
+    max-width: 1080px;
+    height: 100%;
     margin: 40px auto;
     padding: 20px;
     text-align: center;

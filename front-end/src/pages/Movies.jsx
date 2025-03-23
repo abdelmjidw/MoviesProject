@@ -24,32 +24,35 @@ function MoviesList() {
             .catch(() => {
                 setError("Erreur lors du chargement des films.");
                 // setLoading(false);
-                
+
             });
     }, []);
 
     const handleWatchClick = (id) => {
-        navigate(`/watch/movie/${id}`);
+        navigate(`/watch/movies/${id}`);
     };
 
     // if (loading) return <p className="loading">Chargement des films...</p>;
     if (error) return <p className="error">{error}</p>;
 
     return (
-        <div className="container">
+        <>
             <NavBar />
-            <h1 className="h">List Of Movies</h1>
-            <div className="movie-grid">
-                {movies.map((movie, index) => (
-                    <motion.div key={index} className="movie-card" whileHover={{ scale: 1.05 }}>
-                        <img src={movie.image_path} alt={movie.title} />
-                        <div className="title">{movie.title}</div>
-                        <button className="watch-btn" onClick={() => handleWatchClick(movie.id)}>Watch Now</button>
-                    </motion.div>
-                ))}
+            <div className="container">
+
+                <h1 className="h">List Of Movies</h1>
+                <div className="movie-grid">
+                    {movies.map((movie, index) => (
+                        <motion.div key={index} className="movie-card" whileHover={{ scale: 1.05 }}>
+                            <img src={movie.image_path} alt={movie.title} />
+                            <div className="title">{movie.title}</div>
+                            <button className="watch-btn" onClick={() => handleWatchClick(movie.id)}>Watch Now</button>
+                        </motion.div>
+                    ))}
+                </div>
+                <Footer />
             </div>
-            <Footer />
-        </div>
+        </>
     );
 }
 

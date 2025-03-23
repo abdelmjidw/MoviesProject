@@ -63,9 +63,11 @@ function Watch() {
 
 
     const handleFavoriteClick = () => {
+        const newFavorite = { ...content, type };
+
         const updatedFavorites = isFavorite
             ? storedFavorites.filter((item) => item.id !== content.id) // Supprimer du favoris
-            : [...storedFavorites, content]; // Ajouter aux favoris
+            : [...storedFavorites, newFavorite]; // Ajouter aux favoris
 
         // Sauvegarder les favoris dans le localStorage
         localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
