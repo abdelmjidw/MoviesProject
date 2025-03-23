@@ -63,8 +63,8 @@ body::before {
 /* SLIDER PRINCIPAL */
 .slider {
     position: relative;
-    width: 80%;
-    height: 500px;
+    width: 93%;
+    height: 570px;
     margin: 20px auto;
     overflow: hidden;
     border-radius: 15px;

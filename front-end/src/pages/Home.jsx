@@ -21,9 +21,9 @@ const sliderMovies = [
         description: "Join Harry and his friends in a magical adventure through the wizarding world."
     },
     {
-        title: "The Matrix",
-        image: "https://townsquare.media/site/442/files/2018/05/the-matrix-reloaded.jpg?w=1200&h=0&zc=1&s=0&a=t&q=89&format=natural",
-        description: "A computer hacker learns from mysterious rebels about the true nature of his reality."
+        title: "The Walking Dead",
+        image: "https://movizark.files.wordpress.com/2022/09/the-walking-dead-p8282918_b_h8_bn.jpg",
+        description: "A group of survivors navigate a post-apocalyptic world overrun by zombies."
     },
     {
         title: "Interstellar",
@@ -31,14 +31,29 @@ const sliderMovies = [
         description: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival."
     },
     {
+        title: "From",
+        image: "https://image.tmdb.org/t/p/original/tUtCKwFnllW94qM3DRWK9acrFKi.jpg",
+        description: "'From' is a horror-mystery series about people trapped in a town with terrifying creatures and dark secrets."
+    },
+    {
         title: "The Hangover",
         image: "https://images.bauerhosting.com/legacy/empire-tmdb/films/18785/images/39LohvXfll5dGCQIV9B9VJ16ImE.jpg?ar=16%3A9&fit=crop&crop=top&auto=format&w=1440&q=80",
         description: "A Las Vegas bachelor party turns into a wild adventure as three friends try to remember what happened."
     },
     {
+        title: "Dark",
+        image: "https://indiehoy.com/wp-content/uploads/2020/05/dark.jpg",
+        description: "A German series that blends sci-fi and mystery, exploring the intertwined fates of four families as they uncover disturbing secrets across different timelines."
+    },
+    {
         title: "The Conjuring",
         image: "https://www.nme.com/wp-content/uploads/2019/04/PMBD9E-scaled.jpg",
         description: "Paranormal investigators work to help a family terrorized by a dark presence."
+    },
+    {
+        title: "Stranger Things",
+        image: "https://i.blogs.es/4e7fc0/cartel-stranger-things/1366_2000.jpg",
+        description: "A group of kids in a small town face mysterious and supernatural events."
     },
 ];
 
@@ -52,8 +67,8 @@ function Home() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const navigate = useNavigate();
     const sliderMovie = sliderMovies[currentIndex];
-    const matchedMovie = movies.find(movie => movie.title === sliderMovie.title);
-    const footerRef = useRef(null); // Create a reference for the footer
+    const matchedItem = [...movies, ...series].find(item => item.title === sliderMovie.title);
+    const footerRef = useRef(null);
 
     const scrollToFooter = () => {
         if (footerRef.current) {
@@ -132,8 +147,8 @@ function Home() {
                             <p className="description">{sliderMovies[currentIndex].description}</p>
                             <button
                                 className="watch-now"
-                                onClick={() => matchedMovie ? handleWatchClick(matchedMovie.id, "movies") : alert("Ce film n'est pas disponible !")}
-                                disabled={!matchedMovie}
+                                onClick={() => matchedItem ? handleWatchClick(matchedItem.id, matchedItem.type) : alert("Ce contenu n'est pas disponible !")}
+                                disabled={!matchedItem}
                             >
                                 Watch Now
                             </button>
