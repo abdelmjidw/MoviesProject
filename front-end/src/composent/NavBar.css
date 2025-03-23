@@ -3,6 +3,7 @@
 
 .nav-container {
     display: flex;
+    flex: 1;
     height: 60px;
     justify-content: space-between;
     align-items: center;
@@ -11,22 +12,21 @@
     top: 0;
     left: 0;
     z-index: 999;
+    padding: 10px 20px;
     backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .head {
     color: red;
-    font-size: 25px;
+    font-size: 20px;
     text-align: start;
-    margin-left: 10px;
 }
 
 .end {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-right: 10px;
 }
 
 .log-out {
@@ -166,18 +166,7 @@
 }
 
 .links .active {
-    font-weight: bold;
-    color: #ff4757;
-    background-color: rgba(255, 71, 87, 0.1);
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: 1px solid #ff4757;
-    transition: all 0.3s ease;
-}
-
-.links .active:hover {
-    background-color: rgba(255, 71, 87, 0.2);
-    border-color: #ff6b81;
+    font-weight: 700;
 }
 
 .icon-log {

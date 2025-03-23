@@ -197,12 +197,13 @@ function Home() {
                     ))}
                 </div>
 
-                <div ref={footerRef}>
-                    <Footer />
-                </div>
 
 
 
+
+            </div>
+            <div ref={footerRef}>
+                <Footer />
             </div></>
     );
 }

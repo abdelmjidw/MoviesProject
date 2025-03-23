@@ -4,14 +4,14 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Login.css';
-import { Alert } from 'react-bootstrap';
+import { MdOutlineEmail } from "react-icons/md";
 import { toast, Toaster } from 'react-hot-toast';
 
 function Login() {
     const [credentials, setCredentials] = useState({ email: '', password: '' });
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
-    const [show , setShow] = useState(true);
+    const [show, setShow] = useState(true);
     const navigate = useNavigate();
 
     const handleChange = (e) => {
@@ -21,7 +21,7 @@ function Login() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-    
+
         if (!credentials.email || !credentials.password) {
             setError('Please fill in all fields.');
             toast.error('Please fill in all fields.');
@@ -29,14 +29,14 @@ function Login() {
         }
 
         setLoading(true);
-        setError(''); 
+        setError('');
         try {
             const resp = await axios.post('http://localhost:8000/api/v1/login', credentials, {
                 headers: { 'Content-Type': 'application/json' },
             });
-    
+
             console.log(resp.data);
-    
+
             if (resp.status === 200) {
                 localStorage.setItem('token', resp.data.token);
                 localStorage.setItem('username', resp.data.user.user_name);
@@ -58,12 +58,12 @@ function Login() {
             setLoading(false);
         }
     };
-    
+
 
     return (
 
         <div className='login-container'>
-            <div><Toaster/></div>
+            <div><Toaster /></div>
             <div className='login'>
                 <div className='login-header'>
                     <h1 className='head'>Movies Star</h1>
@@ -79,21 +79,21 @@ function Login() {
                         placeholder="Email"
                         value={credentials.email}
                         onChange={handleChange}
-                        
-                    />
 
+                    />
+                    <MdOutlineEmail className="email"/>
                     <label htmlFor="password">Password</label>
                     <input
                         className='login-input'
                         id="password"
                         name="password"
-                        {...!show ? {type:"text"} : {type:"password"}}
+                        {...!show ? { type: "text" } : { type: "password" }}
                         placeholder="Password"
                         value={credentials.password}
                         onChange={handleChange}
-                        
-                        
-                    /> { show ?<LiaEyeSlash className="show" onClick={()=>{setShow(!show)}}/> : <LiaEyeSolid className="show" onClick={()=>{setShow(!show)}}/>}
+
+
+                    /> {show ? <LiaEyeSlash className="show" onClick={() => { setShow(!show) }} /> : <LiaEyeSolid className="show" onClick={() => { setShow(!show) }} />}
                     <button className='submit' type="submit" disabled={loading}>
                         {loading ? 'Loading...' : 'Login'}
                     </button>
