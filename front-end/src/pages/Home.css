@@ -195,18 +195,18 @@ body::before {
 }
 
 .movie-card {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* Organise le contenu verticalement */
+    justify-content: flex-end;
+    /* Place les éléments vers le bas */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     aspect-ratio: 2/3;
-    /* Garde une taille uniforme */
-}
-
-.movie-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    height: 100%;
+    /* S'assure que la carte prend toute la hauteur */
 }
 
 .movie-card img {
@@ -217,31 +217,28 @@ body::before {
     filter: saturate(70%);
     transition: all 0.2s ease;
 }
-.movie-card img:hover{
+
+/* L'effet hover pour l'image */
+.movie-card img:hover {
     filter: saturate(100%);
 }
+
+
+
 .movie-card .title {
-    position: relative;
-    bottom: 105px;
-    left: 50%;
-    transform: translateX(-50%);
     font-size: 1.2rem;
     color: white;
     font-weight: bold;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-    width: 100%;
+    margin-bottom: 5px;
     text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fond plus sombre pour le titre */
 }
 
 .movie-card .watch-btn {
-    display: flex;
-    position: relative;
-    bottom: 100px;
-    left: 50%;
-    transform: translateX(-50%);
     padding: 10px 20px;
+    margin-bottom: 5px;
     background-color: #e50914;
     border: none;
     border-radius: 5px;
@@ -249,11 +246,14 @@ body::before {
     font-family: "Jost", sans-serif;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    align-self: center;
+    /* Centrer le bouton */
 }
 
 .movie-card .watch-btn:hover {
     background-color: #f40612;
 }
+
 
 .slider-nav a:hover,
 .slider-nav a.active {
@@ -271,20 +271,24 @@ body::before {
     border-bottom: #e50914 4px solid;
     padding-bottom: 10px;
 }
-.he{
+
+.he {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.list{
+
+.list {
     color: white;
     font-size: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.list:hover{
+
+.list:hover {
     color: #e50914;
 }
+
 /* Add scroll effects */
 .scroll-effect {
     opacity: 0;

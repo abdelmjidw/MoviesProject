@@ -41,8 +41,8 @@ function SeriesList() {
                 <h1 className="h">List Of Series</h1>
                 <div className="movie-grid">
                     {series.map((serie, index) => (
-                        <motion.div key={index} className="movie-card" whileHover={{ scale: 1.05 }}>
-                            <img src={serie.image_path} alt={serie.title} />
+                        <motion.div style={{ background: `url(${serie.image_path}) no-repeat center center`, backgroundSize: 'cover' }} key={index} className="movie-card" whileHover={{ scale: 1.05 }}>
+                            {/* <img src={serie.image_path} alt={serie.title} /> */}
                             <div className="title">{serie.title}</div>
                             <button className="watch-btn" onClick={() => handleWatchClick(serie.id)}>Watch Now</button>
                         </motion.div>

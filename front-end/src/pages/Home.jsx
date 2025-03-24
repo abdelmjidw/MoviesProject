@@ -160,11 +160,11 @@ function Home() {
                 </div>
 
 
-                <div className="he"><h2 className="h">List Of Movies</h2> <TbGridDots className="list" onClick={()=>{navigate('/movies')}} /></div>
+                <div className="he"><h2 className="h">List Of Movies</h2> <TbGridDots className="list" onClick={() => { navigate('/movies') }} /></div>
                 <div className="movie-grid">
                     {movies.slice(0, 5).map((movie, index) => (
-                        <motion.div key={index} className="movie-card" whileHover={{ scale: 1.05 }}>
-                            <img src={movie.image_path} alt={movie.title} />
+                        <motion.div key={index} style={{ background: `url(${movie.image_path}) no-repeat center center`, backgroundSize: 'cover' }} className="movie-card" whileHover={{ scale: 1.05 }}>
+                            {/* <img src={movie.image_path} alt={movie.title} /> */}
                             <div className="title">{movie.title}</div>
                             <button className="watch-btn" onClick={() => handleWatchClick(movie.id, "movies")}>
                                 Watch Now
@@ -172,12 +172,12 @@ function Home() {
                         </motion.div>
                     ))}
                 </div>
-                <div className="he"><h2 className="h">List Of Series</h2> <TbGridDots className="list" onClick={()=>{navigate('/series')}} /></div>
+                <div className="he"><h2 className="h">List Of Series</h2> <TbGridDots className="list" onClick={() => { navigate('/series') }} /></div>
 
                 <div className="movie-grid">
                     {series.slice(0, 5).map((serie, index) => (
-                        <motion.div key={index} className="movie-card" whileHover={{ scale: 1.05 }}>
-                            <img src={serie.image_path} alt={serie.title} />
+                        <motion.div key={index} style={{ background: `url(${serie.image_path}) no-repeat center center`, backgroundSize: 'cover' }} className="movie-card" whileHover={{ scale: 1.05 }}>
+                            {/* <img src={serie.image_path} alt={serie.title} /> */}
                             <div className="title">{serie.title}</div>
                             <button className="watch-btn" onClick={() => handleWatchClick(serie.id, "series")}>Watch Now</button>
                         </motion.div>
@@ -208,10 +208,20 @@ function Home() {
                             image: "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_FMjpg_UX1000_.jpg",
                         },
                     ].map((actor, index) => (
-                        <motion.div key={index} className="movie-card" whileHover={{ scale: 1.05 }}>
-                            <img src={actor.image} alt={actor.name} />
+                        <motion.div
+                            key={index}
+                            style={{
+                                background: `url(${actor.image}) no-repeat center center`,
+                                backgroundSize: 'cover', // Ensures the image covers the entire div
+                                width: '100%',
+                                height: '100%',
+                            }}
+                            className="movie-card"
+                            whileHover={{ scale: 1.05 }}
+                        >
                             <div className="title">{actor.name}</div>
                         </motion.div>
+
                     ))}
                 </div>
 
