@@ -1,13 +1,16 @@
 import { IoMdSearch } from "react-icons/io";
 import { IoLogOutOutline } from "react-icons/io5";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./NavBar.css";
 import { toast, Toaster } from "react-hot-toast";
+
 function NavBar({ scrollToFooter }) {
     const [searchTerm, setSearchTerm] = useState("");
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navigate = useNavigate();
-    const location = useLocation(); // Get current route
+    const location = useLocation();
 
     const handleSearch = (e) => {
         e.preventDefault();
@@ -25,13 +28,23 @@ function NavBar({ scrollToFooter }) {
         });
     };
 
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
         <>
             <div><Toaster /></div>
-            <div className="nav-container">
-
+            <div className={`nav-container ${isMenuOpen ? "mobile-menu active" : "mobile-menu"}`}>
                 <h1 className="head">Movies Star</h1>
-                <div className="links">
+                
+                {/* Burger Menu Icon */}
+                <div className="burger-menu" onClick={toggleMenu}>
+                    {isMenuOpen ? <FaTimes /> : <FaBars />}
+                </div>
+
+                {/* Navigation Links - now wrapped in a mobile-menu class */}
+                <div className={`links ${isMenuOpen ? "mobile-menu active" : "mobile-menu"}`}>
                     <Link className={location.pathname === "/Home" ? "active" : ""} to="/Home">Home</Link>
                     <Link className={location.pathname === "/movies" ? "active" : ""} to="/movies">Movies</Link>
                     <Link className={location.pathname === "/series" ? "active" : ""} to="/series">Series</Link>
@@ -44,9 +57,9 @@ function NavBar({ scrollToFooter }) {
                     >
                         About
                     </button>
-
                 </div>
-                <div className="end">
+
+                <div className={`end ${isMenuOpen ? "mobile-menu active" : "mobile-menu"}`}>
                     <form className="search" onSubmit={handleSearch}>
                         <input
                             className="nav-input"
@@ -63,7 +76,8 @@ function NavBar({ scrollToFooter }) {
                         Log Out <IoLogOutOutline className="icon-log" />
                     </button>
                 </div>
-            </div></>
+            </div>
+        </>
     );
 }
 

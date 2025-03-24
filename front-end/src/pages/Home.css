@@ -279,6 +279,10 @@ body::before {
     color: white;
     font-size: 25px;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+.list:hover{
+    color: #e50914;
 }
 /* Add scroll effects */
 .scroll-effect {
