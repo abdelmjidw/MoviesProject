@@ -50,8 +50,8 @@ function MoviesList() {
                         </motion.div>
                     ))}
                 </div>
-                <Footer />
             </div>
+            <Footer />
         </>
     );
 }

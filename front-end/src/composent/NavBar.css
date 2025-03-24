@@ -161,7 +161,7 @@
     transition: all 0.3s ease;
 }
 
-.links a:hover::after {
+.links a:not(.active):hover::after {
     width: 100%;
 }
 

@@ -148,3 +148,11 @@ a{
     text-decoration: none;
     color: white;
 }
+.return{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 999;
+}

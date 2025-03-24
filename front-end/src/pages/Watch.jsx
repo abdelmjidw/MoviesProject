@@ -1,9 +1,9 @@
-import { useParams, useLocation } from "react-router-dom";
+import { useParams, useLocation,useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { FaClock, FaCalendarAlt, FaPlay, FaDownload, FaShareAlt, FaCheck } from "react-icons/fa";
 import "./Watch.css";
-
+import { IoIosArrowRoundBack } from "react-icons/io";
 const API_URL = "http://localhost:8000/api/v1";
 
 function Watch() {
@@ -13,6 +13,7 @@ function Watch() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [isFavorite, setIsFavorite] = useState(false);
+    const navigate = useNavigate();
 
     const isMovie = location.pathname.includes("movies");
     const type = isMovie ? "movies" : "series";
@@ -75,6 +76,7 @@ function Watch() {
 
     return (
         <div className="watch-page">
+                <IoIosArrowRoundBack className="return" onClick={()=>{navigate('/Home')}} />
             <div className="background">
                 <img src={content.image_path} alt="Background" className="background-image" />
             </div>
