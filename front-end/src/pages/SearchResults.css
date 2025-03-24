@@ -11,6 +11,7 @@
     font-family: "Jost", sans-serif;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    bottom: 5.5px;
 }
 
 .movie-card .sh:hover {
