@@ -33,30 +33,33 @@ function SearchResults() {
     if (results.length === 0) return <p className="no-results">No results found.</p>;
 
     return (
-        <div className="container">
+        <>
             <NavBar />
-            <h1 className="h">Search results for "{query}"</h1>
-            <div className="movie-grid">
-                {results.map((item) => {
-                    const type = item.type === "movie" ? "movie" : "series";
-                    const link = `/watch/${type}/${item.id}`;
+            <div className="container">
 
-                    return (
-                        <div key={item.id} className="movie-card">
-                            <img src={item.image_path} alt={item.title} />
-                            <div className="title">{item.title}</div>
-                            <Link to={link} className="sh">
-                                <button>Show</button>
-                            </Link>
-                        </div>
-                    )
+                <h1 className="h">Search results for "{query}"</h1>
+                <div className="movie-grid">
+                    {results.map((item) => {
+                        const type = item.duration ? "movies" : "series";
+                        const link = `/watch/${type}/${item.id}`;
 
-                }
+                        return (
+                            <div key={item.id} className="movie-card">
+                                <img src={item.image_path} alt={item.title} />
+                                <div className="title">{item.title}</div>
+                                <Link to={link} className="sh">
+                                    <button>Show</button>
+                                </Link>
+                            </div>
+                        )
 
-                )}
+                    }
+
+                    )}
+                </div>
+                <Foter />
             </div>
-            <Foter/>
-        </div>
+        </>
     );
 }
 
