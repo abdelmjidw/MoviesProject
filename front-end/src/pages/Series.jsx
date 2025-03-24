@@ -48,8 +48,8 @@ function SeriesList() {
                         </motion.div>
                     ))}
                 </div>
-                <Footer />
             </div>
+            <Footer />
         </>
     );
 }

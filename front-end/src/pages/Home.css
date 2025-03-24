@@ -272,7 +272,16 @@ body::before {
     border-bottom: #e50914 4px solid;
     padding-bottom: 10px;
 }
-
+.he{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.list{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
 /* Add scroll effects */
 .scroll-effect {
     opacity: 0;

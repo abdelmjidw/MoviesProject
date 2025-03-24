@@ -6,6 +6,7 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import "./Home.css";
 import { useRef } from "react";
+import { TbGridDots } from "react-icons/tb";
 import { toast, Toaster } from 'react-hot-toast';
 
 
@@ -159,20 +160,22 @@ function Home() {
                 </div>
 
 
-                <h2 className="h">List Of Movies</h2>
+                <div className="he"><h2 className="h">List Of Movies</h2> <TbGridDots className="list" onClick={()=>{navigate('/movies')}} /></div>
                 <div className="movie-grid">
-                    {movies.map((movie, index) => (
+                    {movies.slice(0, 5).map((movie, index) => (
                         <motion.div key={index} className="movie-card" whileHover={{ scale: 1.05 }}>
                             <img src={movie.image_path} alt={movie.title} />
                             <div className="title">{movie.title}</div>
-                            <button className="watch-btn" onClick={() => handleWatchClick(movie.id, "movies")}>Watch Now</button>
+                            <button className="watch-btn" onClick={() => handleWatchClick(movie.id, "movies")}>
+                                Watch Now
+                            </button>
                         </motion.div>
                     ))}
                 </div>
+                <div className="he"><h2 className="h">List Of Series</h2> <TbGridDots className="list" onClick={()=>{navigate('/series')}} /></div>
 
-                <h2 className="h">List Of Series</h2>
                 <div className="movie-grid">
-                    {series.map((serie, index) => (
+                    {series.slice(0, 5).map((serie, index) => (
                         <motion.div key={index} className="movie-card" whileHover={{ scale: 1.05 }}>
                             <img src={serie.image_path} alt={serie.title} />
                             <div className="title">{serie.title}</div>
