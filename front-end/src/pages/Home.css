@@ -221,8 +221,8 @@ body::before {
     filter: saturate(100%);
 }
 .movie-card .title {
-    position: absolute;
-    bottom: 50px;
+    position: relative;
+    bottom: 105px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.2rem;
@@ -230,14 +230,15 @@ body::before {
     font-weight: bold;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
     width: 100%;
     text-align: center;
 }
 
 .movie-card .watch-btn {
-
-    position: absolute;
-    bottom: 5.5px;
+    display: flex;
+    position: relative;
+    bottom: 100px;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -279,6 +280,10 @@ body::before {
     color: white;
     font-size: 25px;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+.list:hover{
+    color: #e50914;
 }
 /* Add scroll effects */
 .scroll-effect {

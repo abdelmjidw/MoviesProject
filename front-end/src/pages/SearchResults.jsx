@@ -57,8 +57,8 @@ function SearchResults() {
 
                     )}
                 </div>
-                <Foter />
             </div>
+                <Foter />
         </>
     );
 }
