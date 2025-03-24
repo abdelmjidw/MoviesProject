@@ -53,7 +53,7 @@ const sliderMovies = [
     },
     {
         title: "Stranger Things",
-        image: "https://i.blogs.es/4e7fc0/cartel-stranger-things/1366_2000.jpg",
+        image: "https://treemily.com/wp-content/uploads/2023/05/AAAABS6v2gvwesuRN6c28ZykPq_fpmnQCJwELBU-kAmEcuC9HhWX-DfuDbtA-bfo-IrfgNtxl0qwJJlhI6DENsGFXknKkjhxPGTV-qhp.jpeg",
         description: "A group of kids in a small town face mysterious and supernatural events."
     },
 ];
