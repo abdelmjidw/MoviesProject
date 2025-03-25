@@ -11,6 +11,7 @@ import MoviesList from './pages/Movies';
 import SearchResults from './pages/SearchResults';
 import ProtectedRoute from './ProtectedRoute';
 import WatchHistory from './pages/WatchHistory';
+import About from './pages/About';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/favorites" element={<ProtectedRoute><Favorites /></ProtectedRoute>} />
           <Route path="/search" element={<ProtectedRoute><SearchResults /></ProtectedRoute>} />
           <Route path="/watch-history" element={<ProtectedRoute><WatchHistory /></ProtectedRoute>} />
+          <Route path='/about' element={<ProtectedRoute><About /></ProtectedRoute>} />
         </Routes>
       </Router>
     </>
