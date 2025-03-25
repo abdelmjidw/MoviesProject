@@ -89,8 +89,8 @@ class MoviesSeeder extends Seeder
                 'duration' => 152,
                 'rating' => 7.6,
                 'genre_id' => 7, // Fantasy
-                'image_path' => "https://static.wikia.nocookie.net/harrypotter/images/f/fb/PS_poster.jpg/revision/latest/thumbnail/width/360/height/360?cb=20180318153750",
-                'link'=>'https://iegybest.im/watch/fylm-harry-potter-and-the-sorcerers-stone-2001-mtrjm',
+                'image_path' => "https://egydead.fyi/wp-content/uploads/2024/07/%D9%81%D9%8A%D9%84%D9%85-Harry-Potter-1-2001-%D9%85%D8%AA%D8%B1%D8%AC%D9%85.jpg",
+                'link'=>'https://egydead.fyi/%d9%85%d8%b4%d8%a7%d9%87%d8%af%d8%a9-%d9%81%d9%8a%d9%84%d9%85-harry-potter-1-and-the-sorcerers-stone-2001-%d9%85%d8%aa%d8%b1%d8%ac%d9%85/',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -185,7 +185,7 @@ class MoviesSeeder extends Seeder
                     'duration' => 138,
                     'rating' => 8.2,
                     'genre_id' => 5, // Thriller
-                    'image_path' => 'https://www.egybest.co.in/watch/976',
+                    'image_path' => 'https://www.themoviedb.org/t/p/original/pOI1vG75ZL6EGyk9qeDP6HPkFt6.jpg',
                     'link'=>'https://www.egybest.co.in/watch/976',
                     'created_at' => now(),
                     'updated_at' => now(),
