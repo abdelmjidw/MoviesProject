@@ -232,7 +232,7 @@ body::before {
 .movie-card .watch-btn {
     padding: 10px 20px;
     margin-bottom: 5px;
-    background-color: #e50914;
+    background-color: #d10812;
     border: none;
     border-radius: 5px;
     color: white;
@@ -243,7 +243,7 @@ body::before {
 }
 
 .movie-card .watch-btn:hover {
-    background-color: #f40612;
+    background-color: #e30712;
 }
 
 

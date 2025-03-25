@@ -36,7 +36,6 @@ function SearchResults() {
         <>
             <NavBar />
             <div className="container">
-
                 <h1 className="h">Search results for "{query}"</h1>
                 <div className="movie-grid">
                     {results.map((item) => {
@@ -44,21 +43,25 @@ function SearchResults() {
                         const link = `/watch/${type}/${item.id}`;
 
                         return (
-                            <div key={item.id} className="movie-card">
+                            <div
+                                key={item.id}
+                                className="movie-card"
+                                style={{
+                                    background: `url(${item.image_path}) no-repeat center center`,
+                                    backgroundSize: "cover",
+                                }}
+                            >
                                 <img src={item.image_path} alt={item.title} />
                                 <div className="title">{item.title}</div>
                                 <Link to={link} className="sh">
-                                    <button>Show</button>
+                                    <button className="watch-btn">Show</button>
                                 </Link>
                             </div>
-                        )
-
-                    }
-
-                    )}
+                        );
+                    })}
                 </div>
             </div>
-                <Foter />
+            <Foter />
         </>
     );
 }

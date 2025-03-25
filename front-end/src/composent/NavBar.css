@@ -240,7 +240,7 @@
         width: 50%;
     }
     .search:hover,.search:focus-within{
-        width: 150px;
+        width: 100px;
     }
     .head{
         font-size: 20px;
@@ -251,6 +251,10 @@
     .burger-menu {
         display: block;
         z-index: 999
+    }
+    .head{
+        font-size: 20px;
+        z-index: 999;
     }
 
     .links, .end {
@@ -294,20 +298,20 @@
     }
     .search {
 
-        width:40%;
+        width:35%;
         margin: 0 auto;
     }
 
     .search:hover, 
     .search:focus-within {
-        width: 60%;
+        width: 45%;
     }
 
     .log-out {
         width: fit-content;
         justify-content: center;
     }
-    
+
 }
 
 @media (min-width: 1010px) {
