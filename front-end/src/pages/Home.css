@@ -164,15 +164,14 @@ body::before {
 .slider-nav {
     position: absolute;
     bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 10px;
     display: flex;
     gap: 5px;
 }
 
 .slider-nav span {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     background: white;
     border-radius: 50%;
     opacity: 0.5;
@@ -182,7 +181,7 @@ body::before {
 
 .slider-nav span.active {
     opacity: 1;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 /* GRILLE DES FILMS */
@@ -203,25 +202,20 @@ body::before {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     aspect-ratio: 2/3;
     height: 100%;
+    filter: saturate(70%);
+    transition: all 0.2s ease;
     /* S'assure que la carte prend toute la hauteur */
 }
 
-.movie-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    filter: saturate(70%);
-    transition: all 0.2s ease;
-}
-
-/* L'effet hover pour l'image */
-.movie-card img:hover {
+.movie-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
     filter: saturate(100%);
 }
+
 
 
 
@@ -233,7 +227,6 @@ body::before {
     text-align: center;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.7);
-    /* Fond plus sombre pour le titre */
 }
 
 .movie-card .watch-btn {
@@ -247,7 +240,6 @@ body::before {
     cursor: pointer;
     transition: background-color 0.3s ease;
     align-self: center;
-    /* Centrer le bouton */
 }
 
 .movie-card .watch-btn:hover {

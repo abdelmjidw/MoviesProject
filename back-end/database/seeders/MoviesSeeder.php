@@ -18,6 +18,7 @@ class MoviesSeeder extends Seeder
                 'rating' => 8.0,
                 'genre_id' => 1, // Action
                 'image_path' => 'https://gamebomb.ru/files/galleries/001/5/5d/408775.jpg',
+                'link'=>'https://www.egybest.co.in/watch/4628',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -29,6 +30,7 @@ class MoviesSeeder extends Seeder
                 'rating' => 7.7,
                 'genre_id' => 2, // Comedy
                 'image_path' => 'https://m.media-amazon.com/images/M/MV5BNDI2MzBhNzgtOWYyOS00NDM2LWE0OGYtOGQ0M2FjMTI2NTllXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
+                'link'=>'https://www.egybest.co.in/watch/4833',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -40,6 +42,7 @@ class MoviesSeeder extends Seeder
                 'rating' => 8.8,
                 'genre_id' => 3, // Sci-Fi
                 'image_path' => 'https://m.media-amazon.com/images/M/MV5BZGFjOTRiYjgtYjEzMS00ZjQ2LTkzY2YtOGQ0NDI2NTVjOGFmXkEyXkFqcGdeQXVyNDQ5MDYzMTk@._V1_FMjpg_UX1000_.jpg',
+                'link'=>'https://www.egybest.co.in/watch/510',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -51,6 +54,7 @@ class MoviesSeeder extends Seeder
                 'rating' => 8.6,
                 'genre_id' => 3, // Sci-Fi
                 'image_path' => 'https://i.pinimg.com/originals/8e/0d/ab/8e0dab8699be85720ce55845065bf6dc.jpg',
+                'link'=>'https://www.egybest.co.in/watch/386',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -62,6 +66,7 @@ class MoviesSeeder extends Seeder
                 'rating' => 7.5,
                 'genre_id' => 5, // Horror
                 'image_path' => 'https://interviewerpr.com/wp-content/uploads/2021/08/The-Conjuring-1365x2048.jpg',
+                'link'=>'https://www.egybest.co.in/watch/4814',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -73,6 +78,7 @@ class MoviesSeeder extends Seeder
                 'rating' => 7.8,
                 'genre_id' => 6, // Romance
                 'image_path' => 'https://m.media-amazon.com/images/M/MV5BNzk0NGU5ZWYtZTI5Ni00NTcwLWJjMzAtN2JmZTA5YTA1YTVlXkEyXkFqcGdeQXVyMzk3NDU4NTU@._V1_FMjpg_UX1000_.jpg',
+                'link'=> 'https://www.egybest.co.in/watch/4546',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -83,7 +89,8 @@ class MoviesSeeder extends Seeder
                 'duration' => 152,
                 'rating' => 7.6,
                 'genre_id' => 7, // Fantasy
-                'image_path' => "http://vignette2.wikia.nocookie.net/the-collectors/images/0/0c/Harry_Potter_and_the_Philosopher's_Stone_DVD.jpg/revision/latest?cb=20121019141743",
+                'image_path' => "https://static.wikia.nocookie.net/harrypotter/images/f/fb/PS_poster.jpg/revision/latest/thumbnail/width/360/height/360?cb=20180318153750",
+                'link'=>'https://iegybest.im/watch/fylm-harry-potter-and-the-sorcerers-stone-2001-mtrjm',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -95,6 +102,7 @@ class MoviesSeeder extends Seeder
                 'rating' => 8.7,
                 'genre_id' => 2, // Sci-Fi
                 'image_path' => 'https://www.themoviedb.org/t/p/original/8QdTKWQtcHXal7UR1V8FWCo5jqp.jpg',
+                'link'=>'https://www.egybest.co.in/watch/6066',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],    
@@ -106,6 +114,7 @@ class MoviesSeeder extends Seeder
                     'rating' => 8.5,
                     'genre_id' => 1, // Action
                     'image_path' => 'https://picfiles.alphacoders.com/945/94530.jpg',
+                    'link'=>'https://www.egybest.co.in/watch/3250',
                     'created_at' => now(),
                     'updated_at' => now(),
             ],
@@ -117,6 +126,7 @@ class MoviesSeeder extends Seeder
                     'rating' => 7.9,
                     'genre_id' => 6, // Romance
                     'image_path' => 'http://images6.fanpop.com/image/photos/32800000/Titanic-Poster-HQ-Untagged-titanic-32807383-3347-5000.jpg',
+                    'link'=>'https://www.egybest.co.in/watch/2882',
                     'created_at' => now(),
                     'updated_at' => now(),
                 ],
@@ -128,6 +138,7 @@ class MoviesSeeder extends Seeder
                     'rating' => 8.4,
                     'genre_id' => 1, // Drama/Thriller
                     'image_path' => 'https://image.tmdb.org/t/p/original/4TgXVa5gmOzMgpmYfBkpPjhMF7i.jpg',
+                    'link'=>'https://www.egybest.co.in/watch/86',
                     'created_at' => now(),
                     'updated_at' => now(),
                 ],
@@ -139,6 +150,7 @@ class MoviesSeeder extends Seeder
                     'rating' => 8.6,
                     'genre_id' => 4, // Drama
                     'image_path' => 'https://www.themoviedb.org/t/p/original/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg',
+                    'link'=>'https://www.egybest.co.in/watch/4783',
                     'created_at' => now(),
                     'updated_at' => now(),
                 ],
@@ -150,6 +162,7 @@ class MoviesSeeder extends Seeder
                     'rating' => 9.0,
                     'genre_id' => 1, // Action
                     'image_path' => 'https://www.themoviedb.org/t/p/original/2Ka2nOtSlwuFlsHtrtfHKMIjldC.jpg',
+                    'link'=>'https://www.egybest.co.in/watch/2718',
                     'created_at' => now(),
                     'updated_at' => now(),
                 ],
@@ -161,6 +174,7 @@ class MoviesSeeder extends Seeder
                     'rating' => 9.2,
                     'genre_id' => 4, // Crime/Drama
                     'image_path' => 'https://www.themoviedb.org/t/p/original/d6LbJZO8ruvXgOjjGRgjtdYpJS4.jpg',
+                    'link'=>'https://www.egybest.co.in/watch/73',
                     'created_at' => now(),
                     'updated_at' => now(),
                 ],
@@ -171,7 +185,8 @@ class MoviesSeeder extends Seeder
                     'duration' => 138,
                     'rating' => 8.2,
                     'genre_id' => 5, // Thriller
-                    'image_path' => 'https://www.themoviedb.org/t/p/original/b68qQ77bzpFrz7kvr3mVRy58bV7.jpg',
+                    'image_path' => 'https://www.egybest.co.in/watch/976',
+                    'link'=>'https://www.egybest.co.in/watch/976',
                     'created_at' => now(),
                     'updated_at' => now(),
                 ],
@@ -183,6 +198,7 @@ class MoviesSeeder extends Seeder
                     'rating' => 7.8,
                     'genre_id' => 3, // Sci-Fi
                     'image_path' => 'https://image.tmdb.org/t/p/original/b9ixaRHHhkdeMfUn3xOcHWY5IXI.jpg',
+                    'link'=>'https://shah4u.net/watch/%D9%81%D9%8A%D9%84%D9%85-avatar-2009-%D9%85%D8%AA%D8%B1%D8%AC%D9%85-%D8%A7%D9%88%D9%86-%D9%84%D8%A7%D9%8A%D9%86',
                     'created_at' => now(),
                     'updated_at' => now(),
                 ],
@@ -194,6 +210,7 @@ class MoviesSeeder extends Seeder
                         'rating' => 8.5,
                         'genre_id' => 7, // Animation/Adventure
                         'image_path' => 'https://www.themoviedb.org/t/p/original/7e2XWBtDPZJwIDxHU3bV9OGlYod.jpg',
+                        'link'=>'https://www.egybest.co.in/watch/1031',
                         'created_at' => now(),
                         'updated_at' => now(),
                     ],
@@ -205,6 +222,7 @@ class MoviesSeeder extends Seeder
                         'rating' => 8.9,
                         'genre_id' => 4, // Crime/Drama
                         'image_path' => 'https://picfiles.alphacoders.com/371/371109.jpg',
+                        'link'=>'https://www.egybest.co.in/watch/4635',
                         'created_at' => now(),
                         'updated_at' => now(),
                     ],
@@ -216,6 +234,7 @@ class MoviesSeeder extends Seeder
                         'rating' => 8.8,
                         'genre_id' => 4, // Drama
                         'image_path' => 'https://image.tmdb.org/t/p/original/saHP97rTPS5eLmrLQEcANmKrsFl.jpg',
+                        'link'=>'https://shah4u.net/watch/%D9%81%D9%8A%D9%84%D9%85-forrest-gump-1994-%D9%85%D8%AA%D8%B1%D8%AC%D9%85',
                         'created_at' => now(),
                         'updated_at' => now(),
                     ],
@@ -227,6 +246,7 @@ class MoviesSeeder extends Seeder
                         'rating' => 8.0,
                         'genre_id' => 4, // Drama/Biography
                         'image_path' => 'https://m.media-amazon.com/images/S/pv-target-images/ea4f1c75ddd9fd937a77875d48f9ce8225ed954afcefabe7a2195311b1a97ddd.jpg',
+                        'link'=>'https://www.egybest.co.in/watch/3817',
                         'created_at' => now(),
                         'updated_at' => now(),
                     ]      

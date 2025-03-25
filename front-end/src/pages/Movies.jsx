@@ -10,7 +10,7 @@ const API_URL = "http://localhost:8000/api/v1/movies";
 
 function MoviesList() {
     const [movies, setMovies] = useState([]);
-    const [loading, setLoading] = useState(true);
+    // const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const navigate = useNavigate();
 
@@ -43,8 +43,7 @@ function MoviesList() {
                 <h1 className="h">List Of Movies</h1>
                 <div className="movie-grid">
                     {movies.map((movie, index) => (
-                        <motion.div key={index} className="movie-card" whileHover={{ scale: 1.05 }}>
-                            <img src={movie.image_path} alt={movie.title} />
+                        <motion.div key={index}  style={{ background: `url(${movie.image_path}) no-repeat center center`, backgroundSize: 'cover' }} className="movie-card" whileHover={{ scale: 1.05 }}>
                             <div className="title">{movie.title}</div>
                             <button className="watch-btn" onClick={() => handleWatchClick(movie.id)}>Watch Now</button>
                         </motion.div>

@@ -19,6 +19,7 @@ class SeriesSeeder extends Seeder
                 'rating' => 9.5,
                 'genre_id' => 3, // Drama
                 'image_path' => 'https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
+                'link' => 'https://www.egybest.co.in/watch/4350',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -31,6 +32,7 @@ class SeriesSeeder extends Seeder
                 'rating' => 8.8,
                 'genre_id' => 2, // Comedy
                 'image_path' => 'https://flxt.tmsimg.com/assets/p183931_b_v8_ac.jpg',
+                'link' => 'https://web2.topcinema.cam/series/%d9%85%d8%b3%d9%84%d8%b3%d9%84-friends-%d8%a7%d9%84%d9%85%d9%88%d8%b3%d9%85-%d8%a7%d9%84%d8%a7%d9%88%d9%84-%d9%85%d8%aa%d8%b1%d8%ac%d9%85/',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -43,6 +45,7 @@ class SeriesSeeder extends Seeder
                 'rating' => 8.7,
                 'genre_id' => 3, // Sci-Fi
                 'image_path' => 'https://resizing.flixster.com/0xxuABVVuzJrUT130WFHKE-irEg=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vNzUyMTFhOTktZTU4Ni00ODkyLWJlYjQtZTgxYTllZmU2OGM0LmpwZw==',
+                'link'=> 'https://www.egybest.co.in/watch/3953',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -55,6 +58,7 @@ class SeriesSeeder extends Seeder
                 'rating' => 8.9,
                 'genre_id' => 2, // Comedy
                 'image_path' => 'https://m.media-amazon.com/images/M/MV5BZjQwYzBlYzUtZjhhOS00ZDQ0LWE0NzAtYTk4MjgzZTNkZWEzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
+                'link' => 'https://web2.topcinema.cam/series/%d9%85%d8%b3%d9%84%d8%b3%d9%84-the-office-%d8%a7%d9%84%d9%85%d9%88%d8%b3%d9%85-%d8%a7%d9%84%d8%a7%d9%88%d9%84-%d9%85%d8%aa%d8%b1%d8%ac%d9%85/',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -67,6 +71,7 @@ class SeriesSeeder extends Seeder
                 'rating' => 8.1,
                 'genre_id' => 5, // Horror
                 'image_path' => 'https://fr.web.img6.acsta.net/pictures/210/454/21045474_20130930201634487.jpg',
+                'link' => 'https://www.egybest.co.in/watch/5811',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -79,6 +84,7 @@ class SeriesSeeder extends Seeder
                 'rating' => 8.7,
                 'genre_id' => 3, // Drama
                 'image_path' => 'https://upload.wikimedia.org/wikipedia/en/b/ba/The_Crown_season_2.jpeg',
+                'link' => 'https://web2.topcinema.cam/series/%d9%85%d8%b3%d9%84%d8%b3%d9%84-the-crown-%d8%a7%d9%84%d9%85%d9%88%d8%b3%d9%85-%d8%a7%d9%84%d8%a7%d9%88%d9%84-%d9%85%d8%aa%d8%b1%d8%ac%d9%85/',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -91,6 +97,7 @@ class SeriesSeeder extends Seeder
                 'rating' => 9.3,
                 'genre_id' => 7, // Fantasy
                 'image_path' => 'https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_.jpg',
+                'link' => 'https://www.egybest.co.in/watch/1397',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -103,6 +110,7 @@ class SeriesSeeder extends Seeder
                 'rating' => 9.3,
                 'genre_id' => 5, // Horror
                 'image_path' => 'https://miro.medium.com/v2/resize:fit:1400/1*39M4XbHXCTfBenNNqLLyLA@2x.jpeg',
+                'link' => 'https://www.egybest.co.in/watch/3977',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -114,6 +122,7 @@ class SeriesSeeder extends Seeder
                     'rating' => 9.1,
                     'genre_id' => 4, // Crime/Drama
                     'image_path' => 'https://picfiles.alphacoders.com/355/355468.jpg',
+                    'link' => 'https://web2.topcinema.cam/series/%d9%85%d8%b3%d9%84%d8%b3%d9%84-sherlock-%d8%a7%d9%84%d9%85%d9%88%d8%b3%d9%85-%d8%a7%d9%84%d8%a7%d9%88%d9%84-%d9%85%d8%aa%d8%b1%d8%ac%d9%85/',
                     'seasons' => 4,
                     'created_at' => now(),
                     'updated_at' => now(),
@@ -125,7 +134,8 @@ class SeriesSeeder extends Seeder
                     'duration' => 60, // Per episode
                     'rating' => 8.0,
                     'genre_id' => 7, // Action/Sci-Fi
-                    'image_path' => 'https://pics.filmaffinity.com/the_umbrella_academy-794888543-large.jpg',
+                    'image_path' => 'https://m.media-amazon.com/images/M/MV5BMzlmMmIxODItYzBjNC00YjMwLWIwOTAtNzVlMTBlNTNkMjZjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
+                    'link' => 'https://web2.topcinema.cam/series/%d9%85%d8%b3%d9%84%d8%b3%d9%84-the-umbrella-academy-%d8%a7%d9%84%d9%85%d9%88%d8%b3%d9%85-%d8%a7%d9%84%d8%a7%d9%88%d9%84-%d9%85%d8%aa%d8%b1%d8%ac%d9%85/',
                     'seasons' => 3,
                     'created_at' => now(),
                     'updated_at' => now(),
@@ -138,6 +148,7 @@ class SeriesSeeder extends Seeder
                     'rating' => 8.3,
                     'genre_id' => 4, // Crime/Drama
                     'image_path' => 'http://www.mulderville.net/images/Netflix/LaCasaDePapel/LaCasaDePapel_001.jpg',
+                    'link' => 'https://www.egybest.co.in/watch/1754',
                     'seasons' => 5,
                     'created_at' => now(),
                     'updated_at' => now(),
@@ -150,6 +161,7 @@ class SeriesSeeder extends Seeder
                     'rating' => 8.8,
                     'genre_id' => 4, // Crime/Drama
                     'image_path' => 'https://2.bp.blogspot.com/-pfRu6E-MsVg/VfRkf3k6GyI/AAAAAAAAAEw/6fC-VqRDhoA/s1600/narcos-netflix-poster.jpg',
+                    'link' => 'https://www.egybest.co.in/watch/1584',
                     'seasons' => 3,
                     'created_at' => now(),
                     'updated_at' => now(),
@@ -162,6 +174,7 @@ class SeriesSeeder extends Seeder
                     'rating' => 9.0,
                     'genre_id' => 4, // Crime/Thriller
                     'image_path' => 'https://static1.srcdn.com/wordpress/wp-content/uploads/True-Detective-Poster.jpg',
+                    'link' => 'https://www.egybest.co.in/watch/6023',
                     'seasons' => 3,
                     'created_at' => now(),
                     'updated_at' => now(),
@@ -174,6 +187,7 @@ class SeriesSeeder extends Seeder
                     'rating' => 8.6,
                     'genre_id' => 7, // Horror/Drama
                     'image_path' => 'https://images-na.ssl-images-amazon.com/images/I/81Lq44yDCDL._SL1500_.jpg',
+                    'link' => 'https://egydead.fyi/season/%d9%85%d8%b3%d9%84%d8%b3%d9%84-the-haunting-of-hill-house-2018-%d9%85%d8%aa%d8%b1%d8%ac%d9%85-%d9%83%d8%a7%d9%85%d9%84/',
                     'seasons' => 1,
                     'created_at' => now(),
                     'updated_at' => now(),
@@ -186,6 +200,7 @@ class SeriesSeeder extends Seeder
                     'rating' => 8.2,
                     'genre_id' => 3, // Comedy/Fantasy
                     'image_path' => 'https://media.senscritique.com/media/000015624432/source_big/The_Good_Place.jpg',
+                    'link' => 'https://egydead.fyi/?s=The+Good+Place',
                     'seasons' => 4,
                     'created_at' => now(),
                     'updated_at' => now(),
@@ -198,6 +213,7 @@ class SeriesSeeder extends Seeder
                     'rating' => 8.8,
                     'genre_id' => 7, // Sci-Fi/Thriller
                     'image_path' => 'http://br.web.img3.acsta.net/pictures/17/11/01/13/35/2780331.jpg',
+                    'link' => 'https://www.egybest.co.in/watch/1407',
                     'seasons' => 3,
                     'created_at' => now(),
                     'updated_at' => now(),
@@ -210,6 +226,7 @@ class SeriesSeeder extends Seeder
                     'rating' => 8.9,
                     'genre_id' => 4, // Crime/Drama
                     'image_path' => 'https://www.themoviedb.org/t/p/original/a3VW6khsyUVKrG0GBCWFG3NzWPX.jpg',
+                    'link'=>'https://web2.topcinema.cam/series/%d9%85%d8%b3%d9%84%d8%b3%d9%84-fargo-%d8%a7%d9%84%d9%85%d9%88%d8%b3%d9%85-%d8%a7%d9%84%d8%ab%d8%a7%d9%86%d9%8a-%d9%85%d8%aa%d8%b1%d8%ac%d9%85/',
                     'seasons' => 5,
                     'created_at' => now(),
                     'updated_at' => now(),
@@ -222,6 +239,7 @@ class SeriesSeeder extends Seeder
                     'rating' => 8.5,
                     'genre_id' => 7, // Sci-Fi/Drama
                     'image_path' => 'https://image.tmdb.org/t/p/original/go2m0Cz5KqEwYFGiXVPNvCUZql3.jpg',
+                    'link' => 'https://egydead.fyi/serie/%d8%ac%d9%85%d9%8a%d8%b9-%d9%85%d9%88%d8%a7%d8%b3%d9%85-%d9%85%d8%b3%d9%84%d8%b3%d9%84-the-expanse-%d9%85%d8%aa%d8%b1%d8%ac%d9%85-%d9%83%d8%a7%d9%85%d9%84/',
                     'seasons' => 6,
                     'created_at' => now(),
                     'updated_at' => now(),
@@ -234,6 +252,7 @@ class SeriesSeeder extends Seeder
                     'rating' => 8.4,
                     'genre_id' => 4, // Drama/Thriller
                     'image_path' => 'https://4.bp.blogspot.com/-iZSC_U484TE/WQDCKIYGQsI/AAAAAAABojY/1gXZybNv1RoFHDoZgOV4VyH8-UNuKaVRQCLcB/s1600/the-handmaids-tale-2017-poster-3.jpg',
+                    'link' => 'https://egydead.fyi/serie/%d8%ac%d9%85%d9%8a%d8%b9-%d9%85%d9%88%d8%a7%d8%b3%d9%85-%d9%85%d8%b3%d9%84%d8%b3%d9%84-the-handmaids-tale-%d9%85%d8%aa%d8%b1%d8%ac%d9%85-%d9%83%d8%a7%d9%85%d9%84/',
                     'seasons' => 5,
                     'created_at' => now(),
                     'updated_at' => now(),
@@ -246,6 +265,7 @@ class SeriesSeeder extends Seeder
                     'rating' => 8.7,
                     'genre_id' => 3, // Comedy/Drama
                     'image_path' => 'https://dol9cswr8axcx.cloudfront.net/series/large/1585684.jpg',
+                    'link' => 'https://egydead.fyi/serie/%d8%ac%d9%85%d9%8a%d8%b9-%d9%85%d9%88%d8%a7%d8%b3%d9%85-%d9%85%d8%b3%d9%84%d8%b3%d9%84-fleabag-%d9%85%d8%aa%d8%b1%d8%ac%d9%85-%d9%83%d8%a7%d9%85%d9%84/',
                     'seasons' => 2,
                     'created_at' => now(),
                     'updated_at' => now(),

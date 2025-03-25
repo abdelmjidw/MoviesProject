@@ -147,7 +147,7 @@ function Home() {
                             <p className="description">{sliderMovies[currentIndex].description}</p>
                             <button
                                 className="watch-now"
-                                onClick={() => matchedItem ? handleWatchClick(matchedItem.id, matchedItem.type) : alert("Ce contenu n'est pas disponible !")}
+                                onClick={() => matchedItem ? handleWatchClick(matchedItem.id, matchedItem.type) : alert("not found!")}
                                 disabled={!matchedItem}
                             >
                                 Watch Now
@@ -156,6 +156,15 @@ function Home() {
                     </motion.div>
                     <button className="prev" onClick={goToPrevious}>‹</button>
                     <button className="next" onClick={goToNext}>›</button>
+                    <div className="slider-nav">
+                        {sliderMovies.map((_, index) => (
+                            <span
+                                key={index}
+                                className={currentIndex === index ? "active" : ""}
+                                onClick={() => setCurrentIndex(index)} // Change slide on dot click
+                            ></span>
+                        ))}
+                    </div>
                 </div>
 
 

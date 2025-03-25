@@ -95,7 +95,7 @@ function Watch() {
                 {/* Bouton Watch qui ajoute à l'historique avant d'ouvrir le lien */}
                 <button className="play" onClick={() => {
                     addToWatchHistory();
-                    window.open("https://www.egybest.co.in/watch/4628", "_blank");
+                    window.open(content.link, "_blank");
                 }}>
                     <FaPlay /> Watch
                 </button>
