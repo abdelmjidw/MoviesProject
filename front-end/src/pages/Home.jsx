@@ -82,7 +82,6 @@ function Home() {
     };
 
     useEffect(() => {
-        document.title = "Home";
         const storedName = localStorage.getItem("username");
         if (storedName) setName(storedName);
     }, []);
