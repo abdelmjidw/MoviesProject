@@ -69,6 +69,7 @@ function Home() {
     const navigate = useNavigate();
     const sliderMovie = sliderMovies[currentIndex];
     const matchedItem = [...movies, ...series].find(item => item.title === sliderMovie.title);
+    const matchedItemType = movies.some(movie => movie.title === sliderMovie.title) ? "movies" : "series";
     const footerRef = useRef(null);
 
     const scrollToFooter = () => {
@@ -147,7 +148,7 @@ function Home() {
                             <p className="description">{sliderMovies[currentIndex].description}</p>
                             <button
                                 className="watch-now"
-                                onClick={() => matchedItem ? handleWatchClick(matchedItem.id, matchedItem.type) : alert("not found!")}
+                                onClick={() => matchedItem ? handleWatchClick(matchedItem.id, matchedItemType) : alert("not found!")}
                                 disabled={!matchedItem}
                             >
                                 Watch Now
