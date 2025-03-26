@@ -6,7 +6,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./NavBar.css";
 import { toast, Toaster } from "react-hot-toast";
 
-function NavBar({ scrollToFooter }) {
+function NavBar() {
     const [searchTerm, setSearchTerm] = useState("");
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navigate = useNavigate();

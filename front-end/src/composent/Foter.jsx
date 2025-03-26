@@ -1,9 +1,9 @@
 import React from "react";
 import "./Foter.css";
 
-const Footer = React.forwardRef((props, ref) => {
+const Footer = React.forwardRef(() => {
     return (
-        <footer className="footer" ref={ref}>
+        <footer className="footer">
             <div className="footer-container">
                 <div className="footer-section">
                     <h2>Movies Star</h2>
