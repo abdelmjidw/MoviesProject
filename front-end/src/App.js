@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes, } from 'react-router-dom';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
-import Home from './pages/Home';
+import Daschboard from './pages/Daschboard';
 import Watch from './pages/Watch';
 import Favorites from './pages/Favorites';
 import SeriesList from './pages/Series';
@@ -12,6 +12,7 @@ import SearchResults from './pages/SearchResults';
 import ProtectedRoute from './ProtectedRoute';
 import WatchHistory from './pages/WatchHistory';
 import About from './pages/About';
+import Home from './pages/Home';
 
 
 function App() {
@@ -20,9 +21,10 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/Home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+          <Route path="/daschboard" element={<ProtectedRoute><Daschboard /></ProtectedRoute>} />
           <Route path="/movies" element={<ProtectedRoute><MoviesList /></ProtectedRoute>} />
           <Route path="/series" element={<ProtectedRoute><SeriesList /></ProtectedRoute>} />
           <Route path="/watch/movies/:id" element={<ProtectedRoute><Watch type="movies" /></ProtectedRoute>} />

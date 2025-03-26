@@ -115,7 +115,7 @@ function SignUp() {
 
                 <span>
                     Already have an account?{' '}
-                    <Link to="/" className="login-link">Login</Link>
+                    <Link to="/login" className="login-link">Login</Link>
                 </span>
             </div>
         </div>

@@ -40,7 +40,7 @@ function Login() {
             if (resp.status === 200) {
                 localStorage.setItem('token', resp.data.token);
                 localStorage.setItem('username', resp.data.user.user_name);
-                navigate('/Home');
+                navigate('/daschboard');
             } else {
                 if (resp.data.errors) {
                     setError(Object.values(resp.data.errors).join(', '));

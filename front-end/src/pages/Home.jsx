@@ -1,19 +1,11 @@
-import { useState, useEffect, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
-import NavBar from "../composent/NavBar";
-import Footer from "../composent/Foter";
-import axios from "axios";
-import { motion } from "framer-motion";
-import "./Home.css";
-import { useRef } from "react";
-import { TbGridDots } from "react-icons/tb";
-import { toast, Toaster } from 'react-hot-toast';
-
-
-
-const API_URL = "http://localhost:8000/api/v1/movies";
-const API_URL2 = "http://localhost:8000/api/v1/series";
-
+import React, {  useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
+import { IoLogoYoutube } from "react-icons/io5";
 
 const sliderMovies = [
     {
@@ -57,35 +49,9 @@ const sliderMovies = [
         description: "A group of kids in a small town face mysterious and supernatural events."
     },
 ];
-
-
 function Home() {
-    const [name, setName] = useState("");
-    const [movies, setMovies] = useState([]);
-    const [series, setSeries] = useState([]);
-
-    const [error, setError] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
-    const navigate = useNavigate();
-    const sliderMovie = sliderMovies[currentIndex];
-    const matchedItem = [...movies, ...series].find(item => item.title === sliderMovie.title);
-    const matchedItemType = movies.some(movie => movie.title === sliderMovie.title) ? "movies" : "series";
-    const footerRef = useRef(null);
-
-    const scrollToFooter = () => {
-        if (footerRef.current) {
-            footerRef.current.scrollIntoView({ behavior: "smooth" });
-        }
-    };
-    const handleWatchClick = (id, type) => {
-        const url = type === "movies" ? `/watch/movies/${id}` : `/watch/series/${id}`;
-        navigate(url);
-    };
-
-    useEffect(() => {
-        const storedName = localStorage.getItem("username");
-        if (storedName) setName(storedName);
-    }, []);
+    const navigateTo = useNavigate();
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -94,26 +60,6 @@ function Home() {
 
         return () => clearInterval(interval);
     }, []);
-
-
-    const fetchData = useCallback(async (url, setter, errorMessage) => {
-        try {
-            const response = await axios.get(url);
-            setter(response.data || []);
-
-
-        } catch (err) {
-            setError(errorMessage);
-            setter([]);
-        }
-    }, []);
-
-    useEffect(() => {
-        fetchData(API_URL, setMovies, "Erreur lors du chargement des films.");
-        fetchData(API_URL2, setSeries, "Erreur lors du chargement des séries.");
-        toast.success('Enjoy!')
-    }, [fetchData]);
-
     const goToPrevious = () => {
         setCurrentIndex(prevIndex => (prevIndex === 0 ? sliderMovies.length - 1 : prevIndex - 1));
     };
@@ -121,128 +67,102 @@ function Home() {
     const goToNext = () => {
         setCurrentIndex(prevIndex => (prevIndex + 1) % sliderMovies.length);
     };
-
-    if (error) return <p className="error">{error}</p>;
+    
 
     return (
         <>
-            <NavBar scrollToFooter={scrollToFooter} />
-            <div className="container">
-                <div><Toaster /></div>
+            <div className={'nav'}>
+                <h1 className="head">Movies Star</h1>
+                <div className={'log'}>
+                    <button className="log-in" onClick={() => navigateTo('/login')}>
+                        Log in
+                    </button>
+                    <button className="Register" onClick={() => navigateTo('/signup')}>
+                    Register
+                    </button>
+                </div>
+            </div>
+
+            <div className="intro">
+                <h2>Welcome to Movies Star 🎥</h2>
+                <p>
+                    Discover a world of entertainment! Movies Star is your go-to platform for streaming the latest and greatest movies and series. 
+                    Explore our curated collection, save your favorites, and enjoy an immersive experience with high-quality streaming. 🌟
+                </p>
+            </div>
 
 
-                <h1 className="hello">Welcome {name}</h1>
+            <div className="slider">
+                <motion.div
+                    key={currentIndex}
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -100 }}
+                    transition={{ duration: 0.8 }}
+                    className="slide"
+                >
+                    <img src={sliderMovies[currentIndex].image} alt={sliderMovies[currentIndex].title} />
+                    <div className="slider-content">
+                        <h1 className="title">{sliderMovies[currentIndex].title}</h1>
+                        <p className="description">{sliderMovies[currentIndex].description}</p>
+                    </div>
+                </motion.div>
+                <button className="prev" onClick={goToPrevious}>‹</button>
+                <button className="next" onClick={goToNext}>›</button>
+                <div className="slider-nav">
+                    {sliderMovies.map((_, index) => (
+                        <span
+                            key={index}
+                            className={currentIndex === index ? "active" : ""}
+                            onClick={() => setCurrentIndex(index)} // Change slide on dot click
+                        ></span>
+                    ))}
+                </div>
+            </div>
+            <div className="cta">
+                <h2>Start Watching Today!</h2>
+                <p>Join us now and explore a vast collection of movies and TV shows.</p>
+                <Link to="/signup"><button className="cta-button">Sign Up Now</button></Link>
+            </div>
 
-                <div className="slider">
-                    <motion.div
-                        key={currentIndex}
-                        initial={{ opacity: 0, x: 100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -100 }}
-                        transition={{ duration: 0.8 }}
-                        className="slide"
-                    >
-                        <img src={sliderMovies[currentIndex].image} alt={sliderMovies[currentIndex].title} />
-                        <div className="slider-content">
-                            <h1 className="title">{sliderMovies[currentIndex].title}</h1>
-                            <p className="description">{sliderMovies[currentIndex].description}</p>
-                            <button
-                                className="watch-now"
-                                onClick={() => matchedItem ? handleWatchClick(matchedItem.id, matchedItemType) : alert("not found!")}
-                                disabled={!matchedItem}
-                            >
-                                Watch Now
-                            </button>
-                        </div>
-                    </motion.div>
-                    <button className="prev" onClick={goToPrevious}>‹</button>
-                    <button className="next" onClick={goToNext}>›</button>
-                    <div className="slider-nav">
-                        {sliderMovies.map((_, index) => (
-                            <span
-                                key={index}
-                                className={currentIndex === index ? "active" : ""}
-                                onClick={() => setCurrentIndex(index)} // Change slide on dot click
-                            ></span>
-                        ))}
+        <footer className="footer">
+            <div className="footer-container">
+                <div className="footer-section">
+                    <h2>Movies Star</h2>
+                    <p>Your favorite streaming platform to discover and watch movies and series.
+                        Enjoy a vast collection of films and shows anytime, anywhere.
+                        Experience entertainment like never before with seamless streaming.</p>
+                </div>
+                <div className="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/daschboard">Daschboard</a></li>
+                        <li><a href="/Movies">Movies</a></li>
+                        <li><a href="/Series">Series</a></li>
+                        <li><a href="/Watch">Watch History</a></li>
+                        <li><a href="/Favorites">Favorites</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                </div>
+                <div className="footer-section">
+                    <h3>Follow us</h3>
+                    <div className="social-icons">
+                        <a href="https://www.facebook.com" target="_blank"><FaFacebook/></a>
+                        <a href="https://www.twitter.com" target="_blank"><FaXTwitter/></a>
+                        <a href="https://www.instagram.com" target="_blank"><FaInstagram /></a>
+                        <a href="https://www.youtube.com" target="_blank"><IoLogoYoutube /></a>
                     </div>
                 </div>
-
-
-                <div className="he"><h2 className="h">List Of Movies</h2> <TbGridDots className="list" onClick={() => { navigate('/movies') }} /></div>
-                <div className="movie-grid">
-                    {movies.slice(0, 5).map((movie, index) => (
-                        <motion.div key={index} style={{ background: `url(${movie.image_path}) no-repeat center center`, backgroundSize: 'cover' }} className="movie-card" whileHover={{ scale: 1.05 }}>
-                            {/* <img src={movie.image_path} alt={movie.title} /> */}
-                            <div className="title">{movie.title}</div>
-                            <button className="watch-btn" onClick={() => handleWatchClick(movie.id, "movies")}>
-                                Watch Now
-                            </button>
-                        </motion.div>
-                    ))}
-                </div>
-                <div className="he"><h2 className="h">List Of Series</h2> <TbGridDots className="list" onClick={() => { navigate('/series') }} /></div>
-
-                <div className="movie-grid">
-                    {series.slice(0, 5).map((serie, index) => (
-                        <motion.div key={index} style={{ background: `url(${serie.image_path}) no-repeat center center`, backgroundSize: 'cover' }} className="movie-card" whileHover={{ scale: 1.05 }}>
-                            {/* <img src={serie.image_path} alt={serie.title} /> */}
-                            <div className="title">{serie.title}</div>
-                            <button className="watch-btn" onClick={() => handleWatchClick(serie.id, "series")}>Watch Now</button>
-                        </motion.div>
-                    ))}
-                </div>
-
-                <h2 className="h">Actors</h2>
-                <div className="movie-grid">
-                    {[
-                        {
-                            name: "Robert Downey Jr.",
-                            image: "https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOF5BMl5BanBnXkFtZTgwNTQ4MTE2MjE@._V1_FMjpg_UX1000_.jpg",
-                        },
-                        {
-                            name: "Scarlett Johansson",
-                            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Scarlett_Johansson_by_Gage_Skidmore_2_%28cropped%2C_2%29.jpg/640px-Scarlett_Johansson_by_Gage_Skidmore_2_%28cropped%2C_2%29.jpg",
-                        },
-                        {
-                            name: "Chris Hemsworth",
-                            image: "https://m.media-amazon.com/images/M/MV5BOTU2MTI0NTIyNV5BMl5BanBnXkFtZTcwMTA4Nzc3OA@@._V1_FMjpg_UX1000_.jpg",
-                        },
-                        {
-                            name: "Gal Gadot",
-                            image: "https://walkoffame.com/wp-content/uploads/2025/03/IMG_9090.jpg",
-                        },
-                        {
-                            name: "Leonardo DiCaprio",
-                            image: "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_FMjpg_UX1000_.jpg",
-                        },
-                    ].map((actor, index) => (
-                        <motion.div
-                            key={index}
-                            style={{
-                                background: `url(${actor.image}) no-repeat center center`,
-                                backgroundSize: 'cover', // Ensures the image covers the entire div
-                                width: '100%',
-                                height: '100%',
-                            }}
-                            className="movie-card"
-                            whileHover={{ scale: 1.05 }}
-                        >
-                            <div className="title">{actor.name}</div>
-                        </motion.div>
-
-                    ))}
-                </div>
-
-
-
-
-
             </div>
-            <div ref={footerRef}>
-                <Footer />
-            </div></>
-    );
+            <div className="footer-bottom">
+                <p>&copy; 2025 Movies Star. All rights reserved.</p>
+            </div>
+        </footer>
+            </>
+
+
+
+    )
 }
 
-export default Home;
+export default Home

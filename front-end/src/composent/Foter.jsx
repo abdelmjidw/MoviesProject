@@ -14,7 +14,7 @@ const Footer = React.forwardRef(() => {
                 <div className="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="/Home">Home</a></li>
+                        <li><a href="/daschboard">Daschboard</a></li>
                         <li><a href="/Movies">Movies</a></li>
                         <li><a href="/Series">Series</a></li>
                         <li><a href="/Watch">Watch History</a></li>
