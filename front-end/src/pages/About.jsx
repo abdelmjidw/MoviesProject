@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { FaFilm, FaRegStar, FaSearchPlus } from "react-icons/fa";
 import { MdHistory } from "react-icons/md";
 import "./About.css";
-import Footer from "../composent/Foter";
 import NavBar from "../composent/NavBar";
 
 function About() {
