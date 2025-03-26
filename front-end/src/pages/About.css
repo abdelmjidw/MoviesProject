@@ -70,24 +70,67 @@
     font-weight: bold;
 }
 
-.about-text {
-    font-size: 1rem;
-    color: #d4d4d4;
-    margin-top: 0.5rem;
-}
-
 .about-creators {
-   
+    margin-top: 40px;
     text-align: center;
-    font-size: 1.2rem;
-    color: #b0b0b0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .creators-text {
+    font-size: 1.5rem;
     font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.creator-images {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.creator {
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.creator-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.creator-photo-1 {
+    width: 120px;
+    height: 120px;
+    object-position: top;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .creator-name {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.creator-name:hover {
     color: #facc15;
-    font-size: 1.3rem;
+    cursor: pointer;
+    transition: color 0.5s ease;
+}
+
+.icon-hand {
+    font-size: 3rem;
+    color: #15fa37;
+    margin-bottom: 25px;
 }
