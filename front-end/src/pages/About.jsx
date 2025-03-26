@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FaFilm, FaRegStar, FaSearch } from "react-icons/fa";
+import { FaSearchPlus } from "react-icons/fa";
 import { MdHistory } from "react-icons/md";
 import "./About.css";
 import Footer from "../composent/Foter";
@@ -42,7 +43,7 @@ function About() {
                     className="about-card"
                     whileHover={{ scale: 1.05 }}
                 >
-                    <FaSearch className="about-icon search" />
+                    <FaSearchPlus className="about-icon " />
                     <h2 className="about-subtitle">Smart Search</h2>
                     <p className="about-text">Find your favorite content quickly with our powerful search engine.</p>
                 </motion.div>
