@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FaFilm, FaRegStar, FaSearchPlus } from "react-icons/fa";
+import { FaHandshake } from "react-icons/fa6";
 import { MdHistory } from "react-icons/md";
 import "./About.css";
 import NavBar from "../composent/NavBar";
@@ -66,7 +67,18 @@ function About() {
                 </div>
 
                 <div className="about-creators">
-                    <p className="creators-text">Created by <span className="creator-name">Id Attaleb Mohamed</span> & <span className="creator-name">Abde Lmajid Moumni</span></p>
+                    <p className="creators-text">Created by :</p>
+                    <div className="creator-images">
+                        <div className="creator">
+                            <img src="/images/_DSC0012.jpg" alt="Id Attaleb Mohamed" className="creator-photo-1" />
+                            <span className="creator-name">Id Attaleb Mohamed</span>
+                        </div>
+                        <FaHandshake className="icon-hand"/>
+                        <div className="creator">
+                            <img src="/images/DSC_3898.jpg" alt="Abde Lmajid Moumni" className="creator-photo" />
+                            <span className="creator-name">Abde Lmajid Moumni</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
