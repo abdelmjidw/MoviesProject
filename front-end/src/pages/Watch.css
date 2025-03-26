@@ -159,4 +159,8 @@ a{
     font-size: 40px;
     cursor: pointer;
     z-index: 999;
+    transition: all 0.3s ease;
+}
+.return:hover {
+    color: #e50914;
 }
