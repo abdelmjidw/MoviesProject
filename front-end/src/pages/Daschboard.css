@@ -300,6 +300,15 @@ body::before {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
 }
+.intro{
+    text-align: center;
+    color: black;
+    padding: 40px;
+    background: #ffcc00;
+    margin: 40px auto;
+    border-radius: 10px;
+    max-width: 600px;
+}
 
 .cta {
     text-align: center;

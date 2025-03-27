@@ -84,7 +84,7 @@ function Home() {
             </div>
 
             <div className="intro">
-                <h2>Welcome to Movies Star 🎥</h2>
+                <h2>Welcome to Movies Star</h2>
                 <p>
                     Discover a world of entertainment! Movies Star is your go-to platform for streaming the latest and greatest movies and series. 
                     Explore our curated collection, save your favorites, and enjoy an immersive experience with high-quality streaming. 🌟
@@ -127,12 +127,12 @@ function Home() {
 
         <footer className="footer">
             <div className="footer-container">
-                <div className="footer-section">
+                <motion.dev className="footer-section">
                     <h2>Movies Star</h2>
                     <p>Your favorite streaming platform to discover and watch movies and series.
                         Enjoy a vast collection of films and shows anytime, anywhere.
                         Experience entertainment like never before with seamless streaming.</p>
-                </div>
+                </motion.dev>
                 <div className="footer-section">
                     <h3>Quick Links</h3>
                     <ul>

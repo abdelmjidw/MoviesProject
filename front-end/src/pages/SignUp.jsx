@@ -38,7 +38,7 @@ function SignUp() {
 
             localStorage.setItem('token', data.token);
             localStorage.setItem('username', data.user.user_name);
-            navigate('/');
+            navigate('/login');
         } catch (err) {
             setError(err.response?.data?.message || 'An error occurred. Please try again.');
         } finally {
