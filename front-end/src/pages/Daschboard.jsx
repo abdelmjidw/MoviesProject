@@ -9,8 +9,6 @@ import { TbGridDots } from "react-icons/tb";
 import { toast, Toaster } from 'react-hot-toast';
 import { FaPlay } from "react-icons/fa";
 
-
-
 const API_URL = "http://localhost:8000/api/v1/movies";
 const API_URL2 = "http://localhost:8000/api/v1/series";
 
@@ -145,6 +143,7 @@ function Daschboard() {
                                 onClick={() => matchedItem ? handleWatchClick(matchedItem.id, matchedItemType) : alert("not found!")}
                                 disabled={!matchedItem}
                             >
+                                <FaPlay className="play-icon" />
                                 Watch Now
                             </button>
                         </div>
@@ -170,8 +169,9 @@ function Daschboard() {
                             {/* <img src={movie.image_path} alt={movie.title} /> */}
                             <div className="overlay" onClick={() => handleWatchClick(movie.id, "movies")} >
                                 <FaPlay className="play-icon" />
+                                <div className="title">{movie.title}</div>
                             </div>
-                            <div className="title">{movie.title}</div>
+
                             {/* <button className="watch-btn" onClick={() => handleWatchClick(movie.id, "movies")}>
                                 Watch Now
                             </button> */}
@@ -184,9 +184,10 @@ function Daschboard() {
                     {series.slice(0, 5).map((serie, index) => (
                         <motion.div key={index} style={{ background: `url(${serie.image_path}) no-repeat center center`, backgroundSize: 'cover' }} className="movie-card" whileHover={{ scale: 1.05 }}>
                             {/* <img src={serie.image_path} alt={serie.title} /> */}
-                            <div className="title">{serie.title}</div>
+
                             <div className="overlay" onClick={() => handleWatchClick(serie.id, "movies")} >
                                 <FaPlay className="play-icon" />
+                                <div className="title">{serie.title}</div>
                             </div>
                             {/* <button className="watch-btn" onClick={() => handleWatchClick(serie.id, "series")}>Watch Now</button> */}
                         </motion.div>
@@ -228,7 +229,7 @@ function Daschboard() {
                             className="movie-card"
                             whileHover={{ scale: 1.05 }}
                         >
-                            <div className="title">{actor.name}</div>
+                            <div className="actor">{actor.name}</div>
                         </motion.div>
 
                     ))}

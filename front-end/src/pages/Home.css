@@ -15,9 +15,8 @@
     top: 0;
     left: 0;
     z-index: 999;
-    backdrop-filter: blur(10px);
     padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.5);
+    
 }
 
 .logo {
@@ -113,7 +112,7 @@
 }
 
 .play-icon {
-    font-size: 1rem;
+    font-size: 15px;
 }
 
 /* Featured Slider */
@@ -213,7 +212,7 @@
 
 .play-button {
     background: #e50914;
-    color: black;
+    color: white;
     border: none;
 }
 
@@ -303,6 +302,7 @@
     color: white;
     display: flex;
     align-items: center;
+    gap: 5px;
     justify-content: center;
     opacity: 0;
     transition: all 0.3s ease;

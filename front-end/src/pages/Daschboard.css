@@ -96,8 +96,8 @@ body::before {
     border-radius: 10px;
     width: 90%;
     max-width: 600px;
-
 }
+
 
 /* Titre du film */
 .slider-content .title {
@@ -122,6 +122,10 @@ body::before {
     border-radius: 5px;
     color: white;
     font-family: "Jost", sans-serif;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -191,7 +195,7 @@ body::before {
     transition: all 0.3s ease;
     aspect-ratio: 2/3;
     height: 100%;
-    filter: saturate(70%);
+    filter: saturate(100%);
     transition: all 0.2s ease;
     /* S'assure que la carte prend toute la hauteur */
 }
@@ -199,13 +203,13 @@ body::before {
 .movie-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-    filter: saturate(100%);
+    filter: saturate(90%);
 }
 
 
 
 
-.movie-card .title {
+.movie-card .actor {
     font-size: 1.2rem;
     color: white;
     font-weight: bold;

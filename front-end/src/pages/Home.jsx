@@ -43,22 +43,24 @@ const featuredMovies = [
     {
         title: "Dune: Part Two",
         image: "https://www.themoviedb.org/t/p/original/8b8R8l88Qje9dn9OE8PY05Nxl1X.jpg",
-        rating: "9.2/10"
     },
     {
         title: "Oppenheimer",
         image: "https://www.themoviedb.org/t/p/original/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
-        rating: "8.8/10"
+    
     },
     {
         title: "The Batman",
         image: "https://www.themoviedb.org/t/p/original/74xTEgt7R36Fpooo50r9T25onhq.jpg",
-        rating: "8.7/10"
+
     },
     {
         title: "Top Gun: Maverick",
         image: "https://www.themoviedb.org/t/p/original/62HCnUTziyWcpDaBO2i1DX17ljH.jpg",
-        rating: "8.9/10"
+    },
+    {
+        title: "Luca",
+        image: "https://m.media-amazon.com/images/M/MV5BMWMyNGNlZTktODVkNS00ZmMyLTk0NmUtNWVjOWU1MWMzZGMzXkEyXkFqcGc@._V1_.jpg",
     }
 ];
 
@@ -149,8 +151,9 @@ function Home() {
                             <div className="card-image" style={{ backgroundImage: `url(${movie.image})` }}>
                                 <div className="overlay">
                                     <FaPlay className="play-icon" />
+                                    <div className="title">{movie.title}</div>
                                 </div>
-                                <div className="title">{movie.title}</div>
+                                
                             </div>
 
                         </motion.div>
