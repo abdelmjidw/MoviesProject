@@ -4,9 +4,10 @@ import NavBar from "../composent/NavBar";
 import Footer from "../composent/Foter";
 import axios from "axios";
 import { motion } from "framer-motion";
-import "./Daschboard.css";  
+import "./Daschboard.css";
 import { TbGridDots } from "react-icons/tb";
 import { toast, Toaster } from 'react-hot-toast';
+import { FaPlay } from "react-icons/fa";
 
 
 
@@ -119,7 +120,7 @@ function Daschboard() {
 
     return (
         <>
-            <NavBar/>
+            <NavBar />
             <div className="container">
                 <div><Toaster /></div>
 
@@ -167,10 +168,13 @@ function Daschboard() {
                     {movies.slice(0, 5).map((movie, index) => (
                         <motion.div key={index} style={{ background: `url(${movie.image_path}) no-repeat center center`, backgroundSize: 'cover' }} className="movie-card" whileHover={{ scale: 1.05 }}>
                             {/* <img src={movie.image_path} alt={movie.title} /> */}
+                            <div className="overlay" onClick={() => handleWatchClick(movie.id, "movies")} >
+                                <FaPlay className="play-icon" />
+                            </div>
                             <div className="title">{movie.title}</div>
-                            <button className="watch-btn" onClick={() => handleWatchClick(movie.id, "movies")}>
+                            {/* <button className="watch-btn" onClick={() => handleWatchClick(movie.id, "movies")}>
                                 Watch Now
-                            </button>
+                            </button> */}
                         </motion.div>
                     ))}
                 </div>
@@ -181,7 +185,10 @@ function Daschboard() {
                         <motion.div key={index} style={{ background: `url(${serie.image_path}) no-repeat center center`, backgroundSize: 'cover' }} className="movie-card" whileHover={{ scale: 1.05 }}>
                             {/* <img src={serie.image_path} alt={serie.title} /> */}
                             <div className="title">{serie.title}</div>
-                            <button className="watch-btn" onClick={() => handleWatchClick(serie.id, "series")}>Watch Now</button>
+                            <div className="overlay" onClick={() => handleWatchClick(serie.id, "movies")} >
+                                <FaPlay className="play-icon" />
+                            </div>
+                            {/* <button className="watch-btn" onClick={() => handleWatchClick(serie.id, "series")}>Watch Now</button> */}
                         </motion.div>
                     ))}
                 </div>
