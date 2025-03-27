@@ -170,41 +170,27 @@ function Home() {
                     </Link>
                 </div>
             </section>
-
-            {/* Footer */}
             <footer className="footer">
-                <div className="footer-container">
-                    <motion.dev className="footer-section">
+                <div className="footer-containe">
+                    <div className="footer-log">
                         <h2>Movies Star</h2>
-                        <p>Your favorite streaming platform to discover and watch movies and series.
-                            Enjoy a vast collection of films and shows anytime, anywhere.
-                            Experience entertainment like never before with seamless streaming.</p>
-                    </motion.dev>
-                    <div className="footer-section">
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li><a href="/daschboard">Daschboard</a></li>
-                            <li><a href="/Movies">Movies</a></li>
-                            <li><a href="/Series">Series</a></li>
-                            <li><a href="/Watch">Watch History</a></li>
-                            <li><a href="/Favorites">Favorites</a></li>
-                            <li><a href="/about">About</a></li>
-                        </ul>
                     </div>
-                    <div className="footer-section">
-                        <h3>Follow us</h3>
-                        <div className="social-icons">
-                            <a href="https://www.facebook.com" target="_blank"><FaFacebook /></a>
-                            <a href="https://www.twitter.com" target="_blank"><FaXTwitter /></a>
-                            <a href="https://www.instagram.com" target="_blank"><FaInstagram /></a>
-                            <a href="https://www.youtube.com" target="_blank"><IoLogoYoutube /></a>
-                        </div>
+                    <div className="footer-lin">
+                        <Link to="/">Home</Link>
+                        <Link to="/about">About</Link>
+                        <Link to="/contact">Contact</Link>
+                        <Link to="/privacy">Privacy Policy</Link>
                     </div>
-                </div>
-                <div className="footer-bottom">
-                    <p>&copy; 2025 Movies Star. All rights reserved.</p>
+                    <div className="footer-socia">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaXTwitter /></a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><IoLogoYoutube /></a>
+                    </div>
+                    <p className="footer-text">© {new Date().getFullYear()} Movies Star. All rights reserved.</p>
                 </div>
             </footer>
+
         </div>
     )
 }
