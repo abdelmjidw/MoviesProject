@@ -10,7 +10,7 @@
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 20px;
-    font-family: f;
+    font-family: 'Jost', sans-serif;
 }
 
 .favorites-list {
@@ -46,9 +46,9 @@
 }
 
 .favorite-info h3 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1.5rem;
     margin-bottom: 10px;
+    font-family: 'Jost', sans-serif;
 }
 
 .favorite-info button {
