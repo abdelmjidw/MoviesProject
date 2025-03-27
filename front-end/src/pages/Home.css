@@ -98,7 +98,7 @@
     border: none;
     padding: 12px 30px;
     font-size: 1.2rem;
-    border-radius: 4px;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -212,13 +212,13 @@
 }
 
 .play-button {
-    background: white;
+    background: #e50914;
     color: black;
     border: none;
 }
 
 .play-button:hover {
-    background: rgba(255, 255, 255, 0.8);
+    background: red
 }
 
 .info-button {
@@ -383,7 +383,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .footer-log h2 {
