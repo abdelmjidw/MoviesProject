@@ -5,7 +5,7 @@
 
 /* Hero Section */
 
-.hero-nav {
+.hero {
     display: flex;
     height: 60px;
     justify-content: space-between;
@@ -16,6 +16,7 @@
     left: 0;
     z-index: 999;
     padding: 10px 20px;
+    
     
 }
 
@@ -44,22 +45,31 @@
 .log-i,
 .register {
     padding: 8px 20px;
-    border-radius: 4px;
-    font-weight: 600;
+    border-radius: 5px;
+    font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    font-size: 12px;
 }
 
 .log-i {
     background: none;
     color: white;
     border: none;
+    transition: all 0.3s ease;
 }
 
 .register {
-    background: #e50914;
-    color: white;
-    border: none;
+    background-color: red;
+
+}
+
+.register:hover {
+    background-color: rgb(229, 20, 20);
+
 }
 
 .log-i:hover {
@@ -417,13 +427,12 @@
 
 .footer-socia a {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .footer-socia a:hover {
     color: #e50914;
-    transform: scale(1.2);
 }
 
 .footer-text {

@@ -88,7 +88,6 @@ function Home() {
         <div className="home-container">
             {/* Hero Section with Nav */}
             <header className="hero">
-                <div className="hero-nav">
                     <h1 className="head">Movies Star</h1>
                     <div className="auth-buttons">
                         <button className="log-i" onClick={() => navigateTo('/login')}>
@@ -98,7 +97,6 @@ function Home() {
                             Register
                         </button>
                     </div>
-                </div>
             </header>
 
 
