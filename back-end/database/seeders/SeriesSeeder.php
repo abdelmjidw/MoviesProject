@@ -45,7 +45,7 @@ class SeriesSeeder extends Seeder
                 'rating' => 8.7,
                 'genre_id' => 3, // Sci-Fi
                 'image_path' => 'https://resizing.flixster.com/0xxuABVVuzJrUT130WFHKE-irEg=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vNzUyMTFhOTktZTU4Ni00ODkyLWJlYjQtZTgxYTllZmU2OGM0LmpwZw==',
-                'link'=> 'https://www.egybest.co.in/watch/3953',
+                'link' => 'https://www.egybest.co.in/watch/3953',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -76,6 +76,19 @@ class SeriesSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
+                'title' => 'Avatar: The Last Airbender',
+                'description' => 'In a war-torn world of elemental magic, a young boy reawakens to undertake a dangerous mystic quest to fulfill his destiny as the Avatar.',
+                'release_date' => '2005-02-21',
+                'seasons' => 3,
+                'episodes' => 61,
+                'rating' => 9.3,
+                'genre_id' => 7, // Animation/Adventure
+                'image_path' => 'https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/09/avatar_-the-last-airbender.jpg',
+                'link' => 'https://egydead.fyi/season/%d9%83%d8%b1%d8%aa%d9%88%d9%86-avatar-the-last-airbender-%d8%a7%d9%84%d9%85%d9%88%d8%b3%d9%85-%d8%a7%d9%84%d8%a7%d9%88%d9%84-%d9%85%d8%aa%d8%b1%d8%ac%d9%85-%d9%83%d8%a7%d9%85%d9%84/',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
                 'title' => 'The Crown',
                 'description' => 'A historical drama about the reign of Queen Elizabeth II.',
                 'release_date' => '2016-11-04',
@@ -85,6 +98,19 @@ class SeriesSeeder extends Seeder
                 'genre_id' => 3, // Drama
                 'image_path' => 'https://upload.wikimedia.org/wikipedia/en/b/ba/The_Crown_season_2.jpeg',
                 'link' => 'https://web2.topcinema.cam/series/%d9%85%d8%b3%d9%84%d8%b3%d9%84-the-crown-%d8%a7%d9%84%d9%85%d9%88%d8%b3%d9%85-%d8%a7%d9%84%d8%a7%d9%88%d9%84-%d9%85%d8%aa%d8%b1%d8%ac%d9%85/',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Rick and Morty',
+                'description' => 'An eccentric scientist and his easily influenced grandson embark on dangerous and bizarre adventures across the multiverse.',
+                'release_date' => '2013-12-02',
+                'seasons' => 6,
+                'episodes' => 61,
+                'rating' => 9.2,
+                'genre_id' => 7, // Animation/Sci-Fi
+                'image_path' => 'https://media.senscritique.com/media/000009446091/source_big/Rick_et_Morty.png',
+                'link' => 'https://egydead.fyi/episode/%d8%a7%d9%86%d9%85%d9%8a-rick-and-morty-the-anime-%d8%a7%d9%84%d8%ad%d9%84%d9%82%d8%a9-1-%d9%85%d8%aa%d8%b1%d8%ac%d9%85%d8%a9/',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -114,162 +140,175 @@ class SeriesSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-                [
-                    'title' => 'Sherlock',
-                    'description' => 'Consulting detective Sherlock Holmes and his partner, Dr. John Watson, solve complex crimes in modern-day London.',
-                    'release_date' => '2010-07-25',
-                    'duration' => 90, // Per episode
-                    'rating' => 9.1,
-                    'genre_id' => 4, // Crime/Drama
-                    'image_path' => 'https://picfiles.alphacoders.com/355/355468.jpg',
-                    'link' => 'https://web2.topcinema.cam/series/%d9%85%d8%b3%d9%84%d8%b3%d9%84-sherlock-%d8%a7%d9%84%d9%85%d9%88%d8%b3%d9%85-%d8%a7%d9%84%d8%a7%d9%88%d9%84-%d9%85%d8%aa%d8%b1%d8%ac%d9%85/',
-                    'seasons' => 4,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
-                [
-                    'title' => 'The Umbrella Academy',
-                    'description' => 'A dysfunctional family of adopted super-powered siblings reunites to solve the mystery of their father\'s death and prevent an impending apocalypse.',
-                    'release_date' => '2019-02-15',
-                    'duration' => 60, // Per episode
-                    'rating' => 8.0,
-                    'genre_id' => 7, // Action/Sci-Fi
-                    'image_path' => 'https://m.media-amazon.com/images/M/MV5BMzlmMmIxODItYzBjNC00YjMwLWIwOTAtNzVlMTBlNTNkMjZjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
-                    'link' => 'https://web2.topcinema.cam/series/%d9%85%d8%b3%d9%84%d8%b3%d9%84-the-umbrella-academy-%d8%a7%d9%84%d9%85%d9%88%d8%b3%d9%85-%d8%a7%d9%84%d8%a7%d9%88%d9%84-%d9%85%d8%aa%d8%b1%d8%ac%d9%85/',
-                    'seasons' => 3,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
-                [
-                    'title' => 'La Casa De Papel',
-                    'description' => 'A criminal mastermind and his team of robbers carry out an ambitious plan to rob the Royal Mint of Spain, facing personal and external challenges.',
-                    'release_date' => '2017-05-02',
-                    'duration' => 70, // Per episode
-                    'rating' => 8.3,
-                    'genre_id' => 4, // Crime/Drama
-                    'image_path' => 'http://www.mulderville.net/images/Netflix/LaCasaDePapel/LaCasaDePapel_001.jpg',
-                    'link' => 'https://www.egybest.co.in/watch/1754',
-                    'seasons' => 5,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
-                [
-                    'title' => 'Narcos',
-                    'description' => 'The series chronicles the rise and fall of the notorious Colombian drug lord Pablo Escobar and the law enforcement efforts to capture him.',
-                    'release_date' => '2015-08-28',
-                    'duration' => 50, // Per episode
-                    'rating' => 8.8,
-                    'genre_id' => 4, // Crime/Drama
-                    'image_path' => 'https://2.bp.blogspot.com/-pfRu6E-MsVg/VfRkf3k6GyI/AAAAAAAAAEw/6fC-VqRDhoA/s1600/narcos-netflix-poster.jpg',
-                    'link' => 'https://www.egybest.co.in/watch/1584',
-                    'seasons' => 3,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
-                [
-                    'title' => 'True Detective',
-                    'description' => 'An anthology crime drama series, with each season following new detectives as they investigate disturbing crimes.',
-                    'release_date' => '2014-01-12',
-                    'duration' => 60, // Per episode
-                    'rating' => 9.0,
-                    'genre_id' => 4, // Crime/Thriller
-                    'image_path' => 'https://static1.srcdn.com/wordpress/wp-content/uploads/True-Detective-Poster.jpg',
-                    'link' => 'https://www.egybest.co.in/watch/6023',
-                    'seasons' => 3,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
-                [
-                    'title' => 'The Haunting of Hill House',
-                    'description' => 'A family confronts haunting memories of their old home, the Hill House, and its terrifying events that shaped their lives.',
-                    'release_date' => '2018-10-12',
-                    'duration' => 60, // Per episode
-                    'rating' => 8.6,
-                    'genre_id' => 7, // Horror/Drama
-                    'image_path' => 'https://images-na.ssl-images-amazon.com/images/I/81Lq44yDCDL._SL1500_.jpg',
-                    'link' => 'https://egydead.fyi/season/%d9%85%d8%b3%d9%84%d8%b3%d9%84-the-haunting-of-hill-house-2018-%d9%85%d8%aa%d8%b1%d8%ac%d9%85-%d9%83%d8%a7%d9%85%d9%84/',
-                    'seasons' => 1,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
-                [
-                    'title' => 'The Good Place',
-                    'description' => 'A woman finds herself in the afterlife’s “Good Place,” but soon realizes she doesn’t belong there and tries to become a better person.',
-                    'release_date' => '2016-09-19',
-                    'duration' => 22, // Per episode
-                    'rating' => 8.2,
-                    'genre_id' => 3, // Comedy/Fantasy
-                    'image_path' => 'https://media.senscritique.com/media/000015624432/source_big/The_Good_Place.jpg',
-                    'link' => 'https://egydead.fyi/?s=The+Good+Place',
-                    'seasons' => 4,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
-                [
-                    'title' => 'Dark',
-                    'description' => 'A German series that blends sci-fi and mystery, exploring the intertwined fates of four families as they uncover disturbing secrets across different timelines.',
-                    'release_date' => '2017-12-01',
-                    'duration' => 60, // Per episode
-                    'rating' => 8.8,
-                    'genre_id' => 7, // Sci-Fi/Thriller
-                    'image_path' => 'http://br.web.img3.acsta.net/pictures/17/11/01/13/35/2780331.jpg',
-                    'link' => 'https://www.egybest.co.in/watch/1407',
-                    'seasons' => 3,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
-                [
-                    'title' => 'Fargo',
-                    'description' => 'A darkly comedic crime drama series, each season tells a new story of crime, murder, and misfortune in the upper Midwest.',
-                    'release_date' => '2014-04-15',
-                    'duration' => 60, // Per episode
-                    'rating' => 8.9,
-                    'genre_id' => 4, // Crime/Drama
-                    'image_path' => 'https://www.themoviedb.org/t/p/original/a3VW6khsyUVKrG0GBCWFG3NzWPX.jpg',
-                    'link'=>'https://web2.topcinema.cam/series/%d9%85%d8%b3%d9%84%d8%b3%d9%84-fargo-%d8%a7%d9%84%d9%85%d9%88%d8%b3%d9%85-%d8%a7%d9%84%d8%ab%d8%a7%d9%86%d9%8a-%d9%85%d8%aa%d8%b1%d8%ac%d9%85/',
-                    'seasons' => 5,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
-                [
-                    'title' => 'The Expanse',
-                    'description' => 'In a future where humanity has colonized the solar system, tensions rise between Earth, Mars, and the Belt, leading to a conflict that threatens the entire human race.',
-                    'release_date' => '2015-12-14',
-                    'duration' => 60, // Per episode
-                    'rating' => 8.5,
-                    'genre_id' => 7, // Sci-Fi/Drama
-                    'image_path' => 'https://image.tmdb.org/t/p/original/go2m0Cz5KqEwYFGiXVPNvCUZql3.jpg',
-                    'link' => 'https://egydead.fyi/serie/%d8%ac%d9%85%d9%8a%d8%b9-%d9%85%d9%88%d8%a7%d8%b3%d9%85-%d9%85%d8%b3%d9%84%d8%b3%d9%84-the-expanse-%d9%85%d8%aa%d8%b1%d8%ac%d9%85-%d9%83%d8%a7%d9%85%d9%84/',
-                    'seasons' => 6,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
-                [
-                    'title' => "The Handmaid's Tale",
-                    'description' => 'In a dystopian future, women are subjugated in a totalitarian society where a handmaid is forced to have children for the ruling class.',
-                    'release_date' => '2017-04-26',
-                    'duration' => 50, // Per episode
-                    'rating' => 8.4,
-                    'genre_id' => 4, // Drama/Thriller
-                    'image_path' => 'https://4.bp.blogspot.com/-iZSC_U484TE/WQDCKIYGQsI/AAAAAAABojY/1gXZybNv1RoFHDoZgOV4VyH8-UNuKaVRQCLcB/s1600/the-handmaids-tale-2017-poster-3.jpg',
-                    'link' => 'https://egydead.fyi/serie/%d8%ac%d9%85%d9%8a%d8%b9-%d9%85%d9%88%d8%a7%d8%b3%d9%85-%d9%85%d8%b3%d9%84%d8%b3%d9%84-the-handmaids-tale-%d9%85%d8%aa%d8%b1%d8%ac%d9%85-%d9%83%d8%a7%d9%85%d9%84/',
-                    'seasons' => 5,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
-                [
-                    'title' => 'Fleabag',
-                    'description' => 'A witty, cynical woman deals with life, love, and family in her own unique way, breaking the fourth wall to share her thoughts with the audience.',
-                    'release_date' => '2016-07-21',
-                    'duration' => 30, // Per episode
-                    'rating' => 8.7,
-                    'genre_id' => 3, // Comedy/Drama
-                    'image_path' => 'https://dol9cswr8axcx.cloudfront.net/series/large/1585684.jpg',
-                    'link' => 'https://egydead.fyi/serie/%d8%ac%d9%85%d9%8a%d8%b9-%d9%85%d9%88%d8%a7%d8%b3%d9%85-%d9%85%d8%b3%d9%84%d8%b3%d9%84-fleabag-%d9%85%d8%aa%d8%b1%d8%ac%d9%85-%d9%83%d8%a7%d9%85%d9%84/',
-                    'seasons' => 2,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ]            
+            [
+                'title' => 'The Simpsons',
+                'description' => 'The satiric adventures of a working-class family in the misfit city of Springfield.',
+                'release_date' => '1989-12-17',
+                'seasons' => 34,
+                'episodes' => 750,
+                'rating' => 8.7,
+                'genre_id' => 7, // Animation/Comedy
+                'image_path' => 'https://firewireblog.com/wp-content/uploads/2022/09/simpsons_s33_social_4x5_2989x3736_en_v1_xxxxxx_a27f111e.png.jpeg',
+                'link' => 'https://egydead.fyi/season/%d9%83%d8%b1%d8%aa%d9%88%d9%86-simpsons-%d8%a7%d9%84%d9%85%d9%88%d8%b3%d9%85-%d8%a7%d9%84%d8%a7%d9%88%d9%84-%d9%83%d8%a7%d9%85%d9%84/',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Sherlock',
+                'description' => 'Consulting detective Sherlock Holmes and his partner, Dr. John Watson, solve complex crimes in modern-day London.',
+                'release_date' => '2010-07-25',
+                'duration' => 90, // Per episode
+                'rating' => 9.1,
+                'genre_id' => 4, // Crime/Drama
+                'image_path' => 'https://picfiles.alphacoders.com/355/355468.jpg',
+                'link' => 'https://web2.topcinema.cam/series/%d9%85%d8%b3%d9%84%d8%b3%d9%84-sherlock-%d8%a7%d9%84%d9%85%d9%88%d8%b3%d9%85-%d8%a7%d9%84%d8%a7%d9%88%d9%84-%d9%85%d8%aa%d8%b1%d8%ac%d9%85/',
+                'seasons' => 4,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'The Umbrella Academy',
+                'description' => 'A dysfunctional family of adopted super-powered siblings reunites to solve the mystery of their father\'s death and prevent an impending apocalypse.',
+                'release_date' => '2019-02-15',
+                'duration' => 60, // Per episode
+                'rating' => 8.0,
+                'genre_id' => 7, // Action/Sci-Fi
+                'image_path' => 'https://m.media-amazon.com/images/M/MV5BMzlmMmIxODItYzBjNC00YjMwLWIwOTAtNzVlMTBlNTNkMjZjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
+                'link' => 'https://web2.topcinema.cam/series/%d9%85%d8%b3%d9%84%d8%b3%d9%84-the-umbrella-academy-%d8%a7%d9%84%d9%85%d9%88%d8%b3%d9%85-%d8%a7%d9%84%d8%a7%d9%88%d9%84-%d9%85%d8%aa%d8%b1%d8%ac%d9%85/',
+                'seasons' => 3,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'La Casa De Papel',
+                'description' => 'A criminal mastermind and his team of robbers carry out an ambitious plan to rob the Royal Mint of Spain, facing personal and external challenges.',
+                'release_date' => '2017-05-02',
+                'duration' => 70, // Per episode
+                'rating' => 8.3,
+                'genre_id' => 4, // Crime/Drama
+                'image_path' => 'http://www.mulderville.net/images/Netflix/LaCasaDePapel/LaCasaDePapel_001.jpg',
+                'link' => 'https://www.egybest.co.in/watch/1754',
+                'seasons' => 5,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Narcos',
+                'description' => 'The series chronicles the rise and fall of the notorious Colombian drug lord Pablo Escobar and the law enforcement efforts to capture him.',
+                'release_date' => '2015-08-28',
+                'duration' => 50, // Per episode
+                'rating' => 8.8,
+                'genre_id' => 4, // Crime/Drama
+                'image_path' => 'https://2.bp.blogspot.com/-pfRu6E-MsVg/VfRkf3k6GyI/AAAAAAAAAEw/6fC-VqRDhoA/s1600/narcos-netflix-poster.jpg',
+                'link' => 'https://www.egybest.co.in/watch/1584',
+                'seasons' => 3,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'True Detective',
+                'description' => 'An anthology crime drama series, with each season following new detectives as they investigate disturbing crimes.',
+                'release_date' => '2014-01-12',
+                'duration' => 60, // Per episode
+                'rating' => 9.0,
+                'genre_id' => 4, // Crime/Thriller
+                'image_path' => 'https://static1.srcdn.com/wordpress/wp-content/uploads/True-Detective-Poster.jpg',
+                'link' => 'https://www.egybest.co.in/watch/6023',
+                'seasons' => 3,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'The Haunting of Hill House',
+                'description' => 'A family confronts haunting memories of their old home, the Hill House, and its terrifying events that shaped their lives.',
+                'release_date' => '2018-10-12',
+                'duration' => 60, // Per episode
+                'rating' => 8.6,
+                'genre_id' => 7, // Horror/Drama
+                'image_path' => 'https://images-na.ssl-images-amazon.com/images/I/81Lq44yDCDL._SL1500_.jpg',
+                'link' => 'https://egydead.fyi/season/%d9%85%d8%b3%d9%84%d8%b3%d9%84-the-haunting-of-hill-house-2018-%d9%85%d8%aa%d8%b1%d8%ac%d9%85-%d9%83%d8%a7%d9%85%d9%84/',
+                'seasons' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'The Good Place',
+                'description' => 'A woman finds herself in the afterlife’s “Good Place,” but soon realizes she doesn’t belong there and tries to become a better person.',
+                'release_date' => '2016-09-19',
+                'duration' => 22, // Per episode
+                'rating' => 8.2,
+                'genre_id' => 3, // Comedy/Fantasy
+                'image_path' => 'https://media.senscritique.com/media/000015624432/source_big/The_Good_Place.jpg',
+                'link' => 'https://egydead.fyi/?s=The+Good+Place',
+                'seasons' => 4,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Dark',
+                'description' => 'A German series that blends sci-fi and mystery, exploring the intertwined fates of four families as they uncover disturbing secrets across different timelines.',
+                'release_date' => '2017-12-01',
+                'duration' => 60, // Per episode
+                'rating' => 8.8,
+                'genre_id' => 7, // Sci-Fi/Thriller
+                'image_path' => 'http://br.web.img3.acsta.net/pictures/17/11/01/13/35/2780331.jpg',
+                'link' => 'https://www.egybest.co.in/watch/1407',
+                'seasons' => 3,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Fargo',
+                'description' => 'A darkly comedic crime drama series, each season tells a new story of crime, murder, and misfortune in the upper Midwest.',
+                'release_date' => '2014-04-15',
+                'duration' => 60, // Per episode
+                'rating' => 8.9,
+                'genre_id' => 4, // Crime/Drama
+                'image_path' => 'https://www.themoviedb.org/t/p/original/a3VW6khsyUVKrG0GBCWFG3NzWPX.jpg',
+                'link' => 'https://web2.topcinema.cam/series/%d9%85%d8%b3%d9%84%d8%b3%d9%84-fargo-%d8%a7%d9%84%d9%85%d9%88%d8%b3%d9%85-%d8%a7%d9%84%d8%ab%d8%a7%d9%86%d9%8a-%d9%85%d8%aa%d8%b1%d8%ac%d9%85/',
+                'seasons' => 5,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'The Expanse',
+                'description' => 'In a future where humanity has colonized the solar system, tensions rise between Earth, Mars, and the Belt, leading to a conflict that threatens the entire human race.',
+                'release_date' => '2015-12-14',
+                'duration' => 60, // Per episode
+                'rating' => 8.5,
+                'genre_id' => 7, // Sci-Fi/Drama
+                'image_path' => 'https://image.tmdb.org/t/p/original/go2m0Cz5KqEwYFGiXVPNvCUZql3.jpg',
+                'link' => 'https://egydead.fyi/serie/%d8%ac%d9%85%d9%8a%d8%b9-%d9%85%d9%88%d8%a7%d8%b3%d9%85-%d9%85%d8%b3%d9%84%d8%b3%d9%84-the-expanse-%d9%85%d8%aa%d8%b1%d8%ac%d9%85-%d9%83%d8%a7%d9%85%d9%84/',
+                'seasons' => 6,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => "The Handmaid's Tale",
+                'description' => 'In a dystopian future, women are subjugated in a totalitarian society where a handmaid is forced to have children for the ruling class.',
+                'release_date' => '2017-04-26',
+                'duration' => 50, // Per episode
+                'rating' => 8.4,
+                'genre_id' => 4, // Drama/Thriller
+                'image_path' => 'https://4.bp.blogspot.com/-iZSC_U484TE/WQDCKIYGQsI/AAAAAAABojY/1gXZybNv1RoFHDoZgOV4VyH8-UNuKaVRQCLcB/s1600/the-handmaids-tale-2017-poster-3.jpg',
+                'link' => 'https://egydead.fyi/serie/%d8%ac%d9%85%d9%8a%d8%b9-%d9%85%d9%88%d8%a7%d8%b3%d9%85-%d9%85%d8%b3%d9%84%d8%b3%d9%84-the-handmaids-tale-%d9%85%d8%aa%d8%b1%d8%ac%d9%85-%d9%83%d8%a7%d9%85%d9%84/',
+                'seasons' => 5,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Fleabag',
+                'description' => 'A witty, cynical woman deals with life, love, and family in her own unique way, breaking the fourth wall to share her thoughts with the audience.',
+                'release_date' => '2016-07-21',
+                'duration' => 30, // Per episode
+                'rating' => 8.7,
+                'genre_id' => 3, // Comedy/Drama
+                'image_path' => 'https://dol9cswr8axcx.cloudfront.net/series/large/1585684.jpg',
+                'link' => 'https://egydead.fyi/serie/%d8%ac%d9%85%d9%8a%d8%b9-%d9%85%d9%88%d8%a7%d8%b3%d9%85-%d9%85%d8%b3%d9%84%d8%b3%d9%84-fleabag-%d9%85%d8%aa%d8%b1%d8%ac%d9%85-%d9%83%d8%a7%d9%85%d9%84/',
+                'seasons' => 2,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
         ]);
     }
 }
