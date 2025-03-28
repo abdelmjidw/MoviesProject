@@ -9,7 +9,6 @@ import { toast, Toaster } from 'react-hot-toast';
 
 function Login() {
     const [credentials, setCredentials] = useState({ email: '', password: '' });
-    const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
     const [show, setShow] = useState(true);
     const navigate = useNavigate();
@@ -23,13 +22,12 @@ function Login() {
         e.preventDefault();
 
         if (!credentials.email || !credentials.password) {
-            setError('Please fill in all fields.');
             toast.error('Please fill in all fields.');
             return;
         }
 
         setLoading(true);
-        setError('');
+     
         try {
             const resp = await axios.post('http://localhost:8000/api/v1/login', credentials, {
                 headers: { 'Content-Type': 'application/json' },
@@ -43,16 +41,13 @@ function Login() {
                 navigate('/daschboard');
             } else {
                 if (resp.data.errors) {
-                    setError(Object.values(resp.data.errors).join(', '));
                     toast.error(Object.values(resp.data.errors).join(', '));
                 } else {
-                    setError(resp.data.message || 'Invalid credentials');
                     toast.error(resp.data.message || 'Invalid credentials');
                 }
             }
         } catch (err) {
             console.error(err);
-            setError('An error occurred. Please try again.');
             toast.error('An error occurred. Please try again.');
         } finally {
             setLoading(false);
