@@ -167,6 +167,18 @@ class MoviesSeeder extends Seeder
                     'updated_at' => now(),
                 ],
                 [
+                    'title' => 'Frozen',
+                    'description' => 'When the newly crowned Queen Elsa accidentally uses her power to turn things into ice, she traps her kingdom in eternal winter.',
+                    'release_date' => '2013-11-27',
+                    'duration' => 102,
+                    'rating' => 7.4,
+                    'genre_id' => 7, // Animation
+                    'image_path' => 'https://4.bp.blogspot.com/-DXpDJCNkLLQ/Vcnz8RSCsiI/AAAAAAAArm4/Fi4O1kpHIFM/s1600/Scan%2B2412.jpg',
+                    'link' => 'https://egydead.fyi/%d9%85%d8%b4%d8%a7%d9%87%d8%af%d8%a9-%d9%81%d9%8a%d9%84%d9%85-frozen-1-2013-%d9%85%d8%aa%d8%b1%d8%ac%d9%85/',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ],
+                [
                     'title' => 'The Godfather',
                     'description' => 'The aging patriarch of an organized crime dynasty transfers control of his empire to his reluctant son.',
                     'release_date' => '1972-03-24',
@@ -187,6 +199,18 @@ class MoviesSeeder extends Seeder
                     'genre_id' => 5, // Thriller
                     'image_path' => 'https://www.themoviedb.org/t/p/original/pOI1vG75ZL6EGyk9qeDP6HPkFt6.jpg',
                     'link'=>'https://www.egybest.co.in/watch/976',
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ],
+                [
+                    'title' => 'Zootopia',
+                    'description' => 'In a city of anthropomorphic animals, a rookie bunny cop and a cynical con artist fox must work together to uncover a conspiracy.',
+                    'release_date' => '2016-03-04',
+                    'duration' => 108,
+                    'rating' => 8.0,
+                    'genre_id' => 7, // Animation
+                    'image_path' => 'https://www.themoviedb.org/t/p/original/hlK0e0wAQ3VLuJcsfIYPvb4JVud.jpg',
+                    'link' => 'https://egydead.fyi/%d9%85%d8%b4%d8%a7%d9%87%d8%af%d8%a9-%d9%81%d9%8a%d9%84%d9%85-zootopia-2016-%d9%85%d8%aa%d8%b1%d8%ac%d9%85/',
                     'created_at' => now(),
                     'updated_at' => now(),
                 ],
@@ -227,6 +251,18 @@ class MoviesSeeder extends Seeder
                         'updated_at' => now(),
                     ],
                     [
+                        'title' => 'Toy Story',
+                        'description' => 'A cowboy doll is profoundly threatened and jealous when a new spaceman figure supplants him as top toy in a boy\'s room.',
+                        'release_date' => '1995-11-22',
+                        'duration' => 81,
+                        'rating' => 8.3,
+                        'genre_id' => 7, // Animation
+                        'image_path' => 'https://www.themoviedb.org/t/p/original/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg',
+                        'link' => 'https://egydead.fyi/%d9%81%d9%8a%d9%84%d9%85-toy-story-toons-hawaiian-vacation-2011-%d9%85%d8%aa%d8%b1%d8%ac%d9%85/',
+                        'created_at' => now(),
+                        'updated_at' => now(),
+                    ],
+                    [
                         'title' => 'Forrest Gump',
                         'description' => 'The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an extraordinary life.',
                         'release_date' => '1994-07-06',
@@ -235,6 +271,30 @@ class MoviesSeeder extends Seeder
                         'genre_id' => 4, // Drama
                         'image_path' => 'https://image.tmdb.org/t/p/original/saHP97rTPS5eLmrLQEcANmKrsFl.jpg',
                         'link'=>'https://shah4u.net/watch/%D9%81%D9%8A%D9%84%D9%85-forrest-gump-1994-%D9%85%D8%AA%D8%B1%D8%AC%D9%85',
+                        'created_at' => now(),
+                        'updated_at' => now(),
+                    ],
+                    [
+                        'title' => 'The Incredibles',
+                        'description' => 'A family of undercover superheroes, while trying to live the quiet suburban life, are forced into action to save the world.',
+                        'release_date' => '2004-11-05',
+                        'duration' => 115,
+                        'rating' => 8.0,
+                        'genre_id' => 7, // Animation
+                        'image_path' => 'https://www.themoviedb.org/t/p/original/2LqaLgk4Z226KkgPJuiOQ58wvrm.jpg',
+                        'link' => 'https://egydead.fyi/assembly/%d8%b3%d9%84%d8%b3%d9%84%d8%a9-%d8%a7%d9%81%d9%84%d8%a7%d9%85-the-incredibles-%d9%83%d8%a7%d9%85%d9%84%d8%a9/',
+                        'created_at' => now(),
+                        'updated_at' => now(),
+                    ],
+                    [
+                        'title' => 'Luca',
+                        'description' => 'On the Italian Riviera, an unlikely but strong friendship grows between a human being and a sea monster disguised as a human.',
+                        'release_date' => '2021-06-18',
+                        'duration' => 95,
+                        'rating' => 7.5,
+                        'genre_id' => 7, // Animation
+                        'image_path' => 'https://www.themoviedb.org/t/p/original/jTswp6KyDYKtvC52GbHagrZbGvD.jpg',
+                        'link' => 'https://egydead.fyi/%d9%85%d8%b4%d8%a7%d9%87%d8%af%d8%a9-%d9%81%d9%8a%d9%84%d9%85-luca-2021-%d9%85%d8%aa%d8%b1%d8%ac%d9%85/',
                         'created_at' => now(),
                         'updated_at' => now(),
                     ],
