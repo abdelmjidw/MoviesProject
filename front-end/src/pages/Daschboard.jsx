@@ -171,10 +171,6 @@ function Daschboard() {
                                 <FaPlay className="play-icon" />
                                 <div className="title">{movie.title}</div>
                             </div>
-
-                            {/* <button className="watch-btn" onClick={() => handleWatchClick(movie.id, "movies")}>
-                                Watch Now
-                            </button> */}
                         </motion.div>
                     ))}
                 </div>
@@ -183,8 +179,6 @@ function Daschboard() {
                 <div className="movie-grid">
                     {series.slice(0, 5).map((serie, index) => (
                         <motion.div key={index} style={{ background: `url(${serie.image_path}) no-repeat center center`, backgroundSize: 'cover' }} className="movie-card" whileHover={{ scale: 1.05 }}>
-                            {/* <img src={serie.image_path} alt={serie.title} /> */}
-
                             <div className="overlay" onClick={() => handleWatchClick(serie.id, "movies")} >
                                 <FaPlay className="play-icon" />
                                 <div className="title">{serie.title}</div>
