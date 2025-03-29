@@ -35,7 +35,7 @@ function About() {
                     >
                         <FaFilm className="about-icon film" />
                         <h2 className="about-subtitle">Extensive Collection</h2>
-                        <p className="about-text">Discover thousands of movies and series from different genres.</p>
+                        <p className="about-text">Discover thousands of movies and series from different genres...</p>
                     </motion.div>
 
                     <motion.div
@@ -44,7 +44,7 @@ function About() {
                     >
                         <FaSearchPlus className="about-icon sear" />
                         <h2 className="about-subtitle">Smart Search</h2>
-                        <p className="about-text">Find your favorite content quickly with our powerful search engine.</p>
+                        <p className="about-text">Find your favorite content quickly with our powerful search engine...</p>
                     </motion.div>
 
                     <motion.div
@@ -53,7 +53,7 @@ function About() {
                     >
                         <MdHistory className="about-icon history" />
                         <h2 className="about-subtitle">Watch History</h2>
-                        <p className="about-text">Never lose track of what you have watched with our history feature.</p>
+                        <p className="about-text">Never lose track of what you have watched with our history feature...</p>
                     </motion.div>
 
                     <motion.div
@@ -62,7 +62,7 @@ function About() {
                     >
                         <FaRegStar className="about-icon favorite" />
                         <h2 className="about-subtitle">Favorites</h2>
-                        <p className="about-text">Save movies and series to your favorites for quick access.</p>
+                        <p className="about-text">Save movies and series to your favorites for quick access...</p>
                     </motion.div>
                 </div>
 
