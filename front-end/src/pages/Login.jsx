@@ -27,7 +27,7 @@ function Login() {
         }
 
         setLoading(true);
-     
+
         try {
             const resp = await axios.post('http://localhost:8000/api/v1/login', credentials, {
                 headers: { 'Content-Type': 'application/json' },
@@ -76,7 +76,7 @@ function Login() {
                         onChange={handleChange}
 
                     />
-                    <MdOutlineEmail className="email"/>
+                    <MdOutlineEmail className="email" />
                     <label htmlFor="password">Password</label>
                     <input
                         className='login-input'

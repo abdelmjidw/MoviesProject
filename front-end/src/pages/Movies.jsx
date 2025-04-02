@@ -45,7 +45,7 @@ function MoviesList() {
                 <h1 className="h">List Of Movies</h1>
                 <div className="movie-grid">
                     {movies.map((movie, index) => (
-                        <motion.div key={index}  style={{ background: `url(${movie.image_path}) no-repeat center center`, backgroundSize: 'cover' }} className="movie-card" whileHover={{ scale: 1.05 }}>
+                        <motion.div key={index} style={{ background: `url(${movie.image_path}) no-repeat center center`, backgroundSize: 'cover' }} className="movie-card" whileHover={{ scale: 1.05 }}>
                             <div className="overlay" onClick={() => handleWatchClick(movie.id, "movies")} >
                                 <FaPlay className="play-icon" />
                                 <div className="title">{movie.title}</div>

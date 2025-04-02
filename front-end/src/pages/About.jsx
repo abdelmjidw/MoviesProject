@@ -73,7 +73,7 @@ function About() {
                             <img src="/images/_DSC0012.jpg" alt="Id Attaleb Mohamed" className="creator-photo-1" />
                             <span className="creator-name">Id Attaleb Mohamed</span>
                         </div>
-                        <FaHandshake className="icon-hand"/>
+                        <FaHandshake className="icon-hand" />
                         <div className="creator">
                             <img src="/images/DSC_3898.jpg" alt="Abde Lmajid Moumni" className="creator-photo" />
                             <span className="creator-name">Abde Lmajid Moumni</span>
