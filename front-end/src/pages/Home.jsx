@@ -47,7 +47,7 @@ const featuredMovies = [
     {
         title: "Oppenheimer",
         image: "https://www.themoviedb.org/t/p/original/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
-    
+
     },
     {
         title: "The Batman",
@@ -61,6 +61,26 @@ const featuredMovies = [
     {
         title: "Luca",
         image: "https://m.media-amazon.com/images/M/MV5BMWMyNGNlZTktODVkNS00ZmMyLTk0NmUtNWVjOWU1MWMzZGMzXkEyXkFqcGc@._V1_.jpg",
+    },
+    {
+        title: "Avatar: The Way of Water",
+        image: "https://www.themoviedb.org/t/p/original/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
+    },
+    {
+        title: "The Witcher",
+        image: "https://www.themoviedb.org/t/p/original/zrPpUlehQaBf8YX2NrVrKK8IEpf.jpg",
+    },
+    {
+        title: "Breaking Bad",
+        image: "https://www.themoviedb.org/t/p/original/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
+    },
+    {
+        title: "Spider-Man: No Way Home",
+        image: "https://www.themoviedb.org/t/p/original/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
+    },
+    {
+        title: "The Mandalorian",
+        image: "https://www.themoviedb.org/t/p/original/xGuOF1T3WmPsAcQEQJfnG7Ud9f8.jpg",
     }
 ];
 
@@ -93,15 +113,15 @@ function Home() {
         <div className="home-container">
             {/* Hero Section with Nav */}
             <header className="hero">
-                    <h1 className="head">Movies Star</h1>
-                    <div className="auth-buttons">
-                        <button className="log-i" onClick={() => navigateTo('/login')}>
-                            Log in
-                        </button>
-                        <button className="register" onClick={() => navigateTo('/signup')}>
-                            Register
-                        </button>
-                    </div>
+                <h1 className="head">Movies Star</h1>
+                <div className="auth-buttons">
+                    <button className="log-i" onClick={() => navigateTo('/login')}>
+                        Log in
+                    </button>
+                    <button className="register" onClick={() => navigateTo('/signup')}>
+                        Register
+                    </button>
+                </div>
             </header>
 
 
