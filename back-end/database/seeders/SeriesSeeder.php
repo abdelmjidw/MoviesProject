@@ -174,7 +174,7 @@ class SeriesSeeder extends Seeder
                 'episodes' => 40,
                 'rating' => 8.9,
                 'genre_id' => 7, // Animation/Mystery
-                'image_path' => 'https://pics.filmaffinity.com/Gravity_Falls_TV_Series-520037458-large.jpg',
+                'image_path' => 'https://vignette.wikia.nocookie.net/disney/images/5/51/Gravity_falls_poster.jpg/revision/latest/scale-to-width-down/2000?cb=20161114045752&path-prefix=es',
                 'link' => 'https://egydead.fyi/episode/%d9%85%d8%b3%d9%84%d8%b3%d9%84-gravity-falls-%d8%a7%d9%84%d9%85%d9%88%d8%b3%d9%85-%d8%a7%d9%84%d8%a7%d9%88%d9%84-%d8%a7%d9%84%d8%ad%d9%84%d9%82%d8%a9-1/',
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -206,6 +206,19 @@ class SeriesSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
+                'title' => 'Dragons: Riders of Berk',
+                'description' => 'Follow Hiccup and his dragon Toothless as they train dragons and protect their village from various threats.',
+                'release_date' => '2012-08-07',
+                'duration' => 22, // Per episode
+                'rating' => 8.0,
+                'genre_id' => 7, // Animation/Adventure
+                'image_path' => 'https://images6.fanpop.com/image/photos/37000000/Dragons-Riders-of-Berk-Poster-how-to-train-your-dragon-37086518-2475-3225.jpg',
+                'link' => 'https://egydead.fyi/season/%d8%aa%d9%86%d8%a7%d9%86%d9%8a%d9%86-%d9%81%d8%b1%d8%b3%d8%a7%d9%86-%d9%82%d8%b1%d9%8a%d8%a9-%d8%a8%d9%8a%d8%b1%d9%83-%d8%a7%d9%84%d9%85%d9%88%d8%b3%d9%85-%d8%a7%d9%84%d8%a7%d9%88%d9%84-%d9%85%d8%af/',
+                'seasons' => 2,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
                 'title' => 'Narcos',
                 'description' => 'The series chronicles the rise and fall of the notorious Colombian drug lord Pablo Escobar and the law enforcement efforts to capture him.',
                 'release_date' => '2015-08-28',
@@ -228,6 +241,19 @@ class SeriesSeeder extends Seeder
                 'image_path' => 'https://static1.srcdn.com/wordpress/wp-content/uploads/True-Detective-Poster.jpg',
                 'link' => 'https://www.egybest.co.in/watch/6023',
                 'seasons' => 3,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Ben 10 Classic',
+                'description' => 'A young boy discovers a mysterious device that allows him to transform into various alien heroes to fight evil.',
+                'release_date' => '2005-12-27',
+                'duration' => 22, // Per episode
+                'rating' => 7.4,
+                'genre_id' => 7, // Animation/Action
+                'image_path' => 'https://i.redd.it/c49yn3mwrnr41.jpg',
+                'link' => 'https://egydead.fyi/serie/%d8%ac%d9%85%d9%8a%d8%b9-%d9%85%d9%88%d8%a7%d8%b3%d9%85-%d9%83%d8%b1%d8%aa%d9%88%d9%86-%d8%a8%d9%8a%d9%86-%d8%aa%d9%86-%d9%83%d8%a7%d9%85%d9%84-%d9%85%d8%af%d8%a8%d9%84%d8%ac-%d8%aa%d8%ad%d9%85%d9%8a/',
+                'seasons' => 4,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -267,6 +293,19 @@ class SeriesSeeder extends Seeder
                 'image_path' => 'http://br.web.img3.acsta.net/pictures/17/11/01/13/35/2780331.jpg',
                 'link' => 'https://www.egybest.co.in/watch/1407',
                 'seasons' => 3,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Gumball',
+                'description' => 'Follow the hilarious adventures of Gumball Watterson, a blue cat, and his family in the quirky town of Elmore.',
+                'release_date' => '2011-05-03',
+                'duration' => 11, // Per episode
+                'rating' => 8.2,
+                'genre_id' => 7,
+                'image_path' => 'https://flxt.tmsimg.com/assets/p14886922_b_v8_ab.jpg',
+                'link' => 'https://egydead.fyi/season/%d9%83%d8%b1%d8%aa%d9%88%d9%86-%d8%b9%d8%a7%d9%84%d9%85-%d8%ba%d8%a7%d9%85%d8%a8%d9%88%d9%84-%d8%a7%d9%84%d9%85%d8%af%d9%87%d8%b4-%d9%85%d8%af%d8%a8%d9%84%d8%ac-%d9%83%d8%a7%d9%85%d9%84/',
+                'seasons' => 6,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -334,7 +373,33 @@ class SeriesSeeder extends Seeder
                 'seasons' => 2,
                 'created_at' => now(),
                 'updated_at' => now(),
-            ]
+            ],
+            [
+                'title' => 'Dragon Ball',
+                'description' => 'Follow the adventures of Goku and his friends as they defend Earth from powerful foes and search for the mystical Dragon Balls.',
+                'release_date' => '1986-02-26',
+                'duration' => 24, // Per episode
+                'rating' => 8.5,
+                'genre_id' => 7, // Animation/Adventure
+                'image_path' => 'https://dragonballlatino.net/wp-content/uploads/2020/11/dragon-ball-super-28-poster.jpg',
+                'link' => 'https://egydead.fyi/serie/%d8%ac%d9%85%d9%8a%d8%b9-%d9%85%d9%88%d8%a7%d8%b3%d9%85-%d8%a7%d9%86%d9%85%d9%8a-dragon-ball-%d9%83%d8%a7%d9%85%d9%84/',
+                'seasons' => 9,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Detective Conan',
+                'description' => 'A high school detective is transformed into a child and solves mysteries while searching for a cure.',
+                'release_date' => '1996-01-08',
+                'duration' => 25, // Per episode
+                'rating' => 8.3,
+                'genre_id' => 7, // Animation/Mystery
+                'image_path' => 'https://m.media-amazon.com/images/M/MV5BMzA1MmI0OGItODU3NS00ZTA0LWI2OTMtYjMyZDVmNjI2YzdlXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg',
+                'link' => 'https://egydead.fyi/season/%d8%ac%d9%85%d9%8a%d8%b9-%d8%ad%d9%84%d9%82%d8%a7%d8%aa-%d8%a7%d9%86%d9%85%d9%8a-detective-conan-%d9%85%d8%aa%d8%b1%d8%ac%d9%85-%d9%83%d8%a7%d9%85%d9%84/',
+                'seasons' => 30,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ]);
     }
 }
