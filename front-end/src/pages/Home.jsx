@@ -156,9 +156,7 @@ function Home() {
                                     <FaPlay className="play-icon" />
                                     <div className="title">{movie.title}</div>
                                 </div>
-                                
                             </div>
-
                         </motion.div>
                     ))}
                 </div>
