@@ -68,6 +68,11 @@ function Home() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const navigateTo = useNavigate();
 
+    const handleWatchClick = () => {
+        const url = "/login";
+        navigateTo(url);
+    };
+
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex(prevIndex => (prevIndex + 1) % sliderMovies.length);
@@ -114,7 +119,7 @@ function Home() {
                         <h1 className="title">{sliderMovies[currentIndex].title}</h1>
                         <p className="description">{sliderMovies[currentIndex].description}</p>
                         <div className="slide-buttons">
-                            <button className="play-button">
+                            <button className="play-button" onClick={handleWatchClick}>
                                 <FaPlay /> Watch Now
                             </button>
                             <button className="info-button">
@@ -147,7 +152,7 @@ function Home() {
                             transition={{ type: "spring", stiffness: 300 }}
                         >
                             <div className="card-image" style={{ backgroundImage: `url(${movie.image})` }}>
-                                <div className="overlay">
+                                <div className="overlay" onClick={handleWatchClick}>
                                     <FaPlay className="play-icon" />
                                     <div className="title">{movie.title}</div>
                                 </div>
