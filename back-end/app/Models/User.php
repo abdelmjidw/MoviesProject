@@ -24,6 +24,17 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function watchHistories()
+    {
+        return $this->hasMany(WatchHistory::class);
+    }
+
+
+    public function favorites()
+    {
+        return $this->hasMany(Favorites::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

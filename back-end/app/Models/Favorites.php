@@ -35,7 +35,7 @@ class Favorites extends Model
     /**
      * Relationship: A favorite can belong to a movie.
      */
-    public function movie()
+    public function movies()
     {
         return $this->belongsTo(Movies::class);
     }
