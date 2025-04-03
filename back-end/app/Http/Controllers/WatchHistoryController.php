@@ -34,11 +34,10 @@ class WatchHistoryController extends Controller
         // Validate the request
         $validated = $request->validate([
             'user_id' => 'required|exists:users,id',
-            'movie_id' => 'nullable|exists:movies,id',
-            'series_id' => 'nullable|exists:series,id',
-            'watched_at' => 'required|date',
+            'movie_id' => 'nullable|required_without:series_id|exists:movies,id',
+            'series_id' => 'nullable|required_without:movie_id|exists:series,id',
+            'watched_at' => 'required|date', 
         ]);
-
         // Create a new watch history record
         $watchHistory = WatchHistory::create($validated);
 
@@ -75,7 +74,7 @@ class WatchHistoryController extends Controller
             'user_id' => 'sometimes|required|exists:users,id',
             'movie_id' => 'sometimes|nullable|exists:movies,id',
             'series_id' => 'sometimes|nullable|exists:series,id',
-            'watched_at' => 'sometimes|required|date',
+            'last_watched' => 'sometimes|required|date',
         ]);
 
         // Find the watch history record
