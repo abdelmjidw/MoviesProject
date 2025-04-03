@@ -11,7 +11,7 @@ class WatchHistory extends Model
     
     protected $fillable = [
         'user_id',
-        'movie_id',
+        'movies_id',
         'series_id',
         'last_watched'
     ];
@@ -31,7 +31,7 @@ class WatchHistory extends Model
     /**
      * Relationship: A favorite can belong to a movie.
      */
-    public function movie()
+    public function movies()
     {
         return $this->belongsTo(Movies::class);
     }

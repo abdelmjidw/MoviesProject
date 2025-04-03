@@ -18,14 +18,14 @@ class Users extends Model
     ];
 
 
-    public function watchHistories()
-    {
-        return $this->hasMany(WatchHistory::class);
-    }
+    // public function watchHistories()
+    // {
+    //     return $this->hasMany(WatchHistory::class);
+    // }
 
 
-    public function favorites()
-    {
-        return $this->hasMany(Favorites::class);
-    }
+    // public function favorites()
+    // {
+    //     return $this->hasMany(Favorites::class);
+    // }
 }

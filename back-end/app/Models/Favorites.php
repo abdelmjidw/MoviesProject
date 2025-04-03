@@ -13,7 +13,7 @@ class Favorites extends Model
     protected $fillable = [
         'user_id',
         'series_id',
-        'movie_id',
+        'movies_id',
     ];
 
     /**
@@ -35,7 +35,7 @@ class Favorites extends Model
     /**
      * Relationship: A favorite can belong to a movie.
      */
-    public function movie()
+    public function movies()
     {
         return $this->belongsTo(Movies::class);
     }
