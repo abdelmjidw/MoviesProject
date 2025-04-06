@@ -179,7 +179,7 @@ function Daschboard() {
                 <div className="movie-grid">
                     {series.slice(0, 5).map((serie, index) => (
                         <motion.div key={index} style={{ background: `url(${serie.image_path}) no-repeat center center`, backgroundSize: 'cover' }} className="movie-card" whileHover={{ scale: 1.05 }}>
-                            <div className="overlay" onClick={() => handleWatchClick(serie.id, "movies")} >
+                            <div className="overlay" onClick={() => handleWatchClick(serie.id, "series")} >
                                 <FaPlay className="play-icon" />
                                 <div className="title">{serie.title}</div>
                             </div>

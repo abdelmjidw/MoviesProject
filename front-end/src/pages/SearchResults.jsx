@@ -46,13 +46,9 @@ function SearchResults() {
                             <div
                                 key={item.id}
                                 className="movie-card"
-                                style={{
-                                    background: `url(${item.image_path}) no-repeat center center`,
-                                    backgroundSize: "cover",
-                                }}
                             >
-                                <img src={item.image_path} alt={item.title} />
-                                <div className="title">{item.title}</div>
+                                <img className="cover" src={item.image_path} alt={item.title} />
+                                {/* <div className="title">{item.title}</div> */}
                                 <Link to={link} className="sh">
                                     <button className="watch-btn">Show</button>
                                 </Link>
