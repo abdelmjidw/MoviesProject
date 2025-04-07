@@ -56,7 +56,6 @@ const sliderMovies = [
     },
 ];
 
-
 function Daschboard() {
     const [name, setName] = useState("");
     const [movies, setMovies] = useState([]);
