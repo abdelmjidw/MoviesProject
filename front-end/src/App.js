@@ -13,8 +13,7 @@ import ProtectedRoute from './ProtectedRoute';
 import WatchHistory from './pages/WatchHistory';
 import About from './pages/About';
 import Home from './pages/Home';
-
-
+import Notfound from './pages/Notfound';
 function App() {
   
   return (
@@ -33,6 +32,7 @@ function App() {
           <Route path="/search" element={<ProtectedRoute><SearchResults /></ProtectedRoute>} />
           <Route path="/watch-history" element={<ProtectedRoute><WatchHistory /></ProtectedRoute>} />
           <Route path='/about' element={<ProtectedRoute><About /></ProtectedRoute>} />
+          <Route path='/*' element={<Notfound />} />
         </Routes>
       </Router>
     </>

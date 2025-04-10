@@ -1,0 +1,130 @@
+.notfound-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+  }
+  
+  .content {
+    z-index: 2;
+    max-width: 700px;
+  }
+  
+  .content_head {
+    font-size: 8rem;
+    margin: 0;
+    background: linear-gradient(to right, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 20px rgba(255, 138, 0, 0.3);
+  }
+  
+  .subhead {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+  }
+  
+  .content_text {
+    font-size: 1.2rem;
+    opacity: 0.85;
+    margin-bottom: 2rem;
+  }
+  
+  .btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ff8a00, #e52e71);
+    color: white;
+    box-shadow: 0 4px 15px rgba(229, 46, 113, 0.4);
+    transition: transform 0.2s ease;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+  }
+  
+  .btn:active {
+    transform: scale(0.95);
+  }
+  
+  /* Space scene */
+  .space-scene {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    opacity: 0.6;
+  }
+  
+  .planet {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #3a1c71, #d76d77, #ffaf7b);
+    box-shadow: 0 0 50px rgba(255, 175, 123, 0.5);
+  }
+  
+  .planet::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 30%;
+    height: 30%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+  }
+  
+  .astronaut {
+    position: absolute;
+    top: 42%;
+    left: 15%;
+    font-size: 3rem;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) rotate(5deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(-5deg);
+    }
+  }
+
+  /* .stars::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(1px 1px at 20px 30px, white, transparent),
+      radial-gradient(1px 1px at 40px 70px, white, transparent),
+      radial-gradient(1px 1px at 80px 40px, white, transparent),
+      radial-gradient(1px 1px at 120px 80px, white, transparent),
+      radial-gradient(1px 1px at 160px 20px, white, transparent),
+      radial-gradient(1px 1px at 200px 60px, white, transparent);
+    background-size: 200px 200px;
+    animation: twinkle 4s infinite ease-in-out;
+  } */
+  
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+  }
+  
