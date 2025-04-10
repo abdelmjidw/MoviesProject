@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./WatchHistory.css";
 import NavBar from "../composent/NavBar";
 import Footer from "../composent/Foter";
-
+import { motion } from "framer-motion";
 const WatchHistory = () => {
     const [history, setHistory] = useState([]);
 
@@ -21,7 +21,15 @@ const WatchHistory = () => {
         <>
             <NavBar />
             <div className="history-container">
-                <h1>Watch History</h1>
+            <motion.h1
+                    className="about-title"
+                    initial={{ opacity: 0, y: -30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    Watch History
+                </motion.h1>
+
                 <button onClick={clearHistory} className="clear-btn">Clear History</button>
 
                 {history.length === 0 ? (

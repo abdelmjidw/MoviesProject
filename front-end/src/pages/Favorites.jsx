@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Favorites.css";
 import NavBar from "../composent/NavBar";
 import Foter from "../composent/Foter";
-
+import { motion } from "framer-motion";
 function Favorites() {
     const [favorites, setFavorites] = useState([]);
 
@@ -25,7 +25,15 @@ function Favorites() {
             <NavBar />
             <div className="favorites-page">
 
-                <h1 className="titre">My Favorites</h1>
+            <motion.h1
+                    className="about-title"
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    Favorites
+                </motion.h1>
+
                 {favorites.length === 0 ? (
                     <p className="pp">No content in your favorites.</p>
                 ) : (
